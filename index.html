@@ -1,57 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Tiffin Service</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background-color: #ff6b35; color: white; text-align: center; padding: 50px; }
-        nav { background-color: #333; color: white; padding: 10px; text-align: center; }
-        nav a { color: white; margin: 0 15px; text-decoration: none; }
-        section { padding: 20px; max-width: 800px; margin: auto; }
-        .menu-item { border: 1px solid #ddd; padding: 10px; margin: 10px 0; display: flex; }
-        .menu-item img { width: 100px; height: 100px; margin-right: 20px; }
-        footer { background-color: #333; color: white; text-align: center; padding: 10px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rathore Tiffin Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background: linear-gradient(135deg,#ff6a00,#ee0979);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+animation: fadeIn 1.5s ease-in-out;
+}
+
+h1{
+font-size:45px;
+margin-bottom:15px;
+animation: slideDown 1.2s ease;
+}
+
+p{
+font-size:20px;
+margin-bottom:30px;
+opacity:0.9;
+}
+
+.btn{
+padding:15px 35px;
+font-size:18px;
+background:white;
+color:#ee0979;
+border:none;
+border-radius:50px;
+cursor:pointer;
+transition:0.3s;
+text-decoration:none;
+}
+
+.btn:hover{
+transform:scale(1.1);
+background:#000;
+color:#fff;
+}
+
+@keyframes fadeIn{
+from{opacity:0}
+to{opacity:1}
+}
+
+@keyframes slideDown{
+from{transform:translateY(-50px);opacity:0}
+to{transform:translateY(0);opacity:1}
+}
+
+footer{
+position:absolute;
+bottom:15px;
+font-size:14px;
+opacity:0.8;
+}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to [Your Service Name] Tiffin Service</h1>
-        <p>Fresh, home-cooked meals delivered to your door!</p>
-    </header>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="home">
-        <h2>Why Choose Us?</h2>
-        <p>Authentic flavors, hygienic preparation, and timely delivery. Order now!</p>
-        <button onclick="alert('Order via WhatsApp: +1234567890')">Order Now</button>
-    </section>
-    <section id="menu">
-        <h2>Our Menu</h2>
-        <div class="menu-item">
-            <img src="https://via.placeholder.com/100" alt="Veg Thali">
-            <div>
-                <h3>Veg Thali</h3>
-                <p>Rice, dal, veggies, and more. ₹150</p>
-            </div>
-        </div>
-        <!-- Add more menu items here -->
-    </section>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We provide traditional tiffin services with love. Follow us on Instagram: @[YourHandle]</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Phone: +1234567890 | Email: info@yourservice.com</p>
-    </section>
-    <footer>
-        <p>&copy; 2023 [Your Service Name]. All rights reserved.</p>
-    </footer>
+
+<div class="container">
+<h1>Rathore Tiffin Service</h1>
+<p>📍 Netaji Subhash Place</p>
+<p><strong>Ghar Jaisa Khana</strong></p>
+
+<a href="booking.html" class="btn">Book Now</a>
+</div>
+
+<footer>
+© 2026 Rathore Tiffin Service
+</footer>
+
 </body>
 </html>
