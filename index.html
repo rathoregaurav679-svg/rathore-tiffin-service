@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rathore Tiffin Service</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -12,131 +12,205 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
+background:#f8f8f8;
+}
+
+/* HERO SECTION */
+.hero{
 height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') center/cover;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 color:white;
-overflow:hidden;
-position:relative;
 text-align:center;
-}
-
-/* Food Background */
-body::before{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') no-repeat center center/cover;
-filter:blur(5px);
-z-index:-2;
-}
-
-/* Dark Overlay */
-body::after{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
-z-index:-1;
-}
-
-.container{
-animation: fadeIn 1.5s ease-in-out;
 padding:20px;
 }
 
-h1{
-font-size:48px;
-margin-bottom:10px;
-animation: slideDown 1.2s ease;
-}
-
-.location{
-font-size:18px;
+.hero h1{
+font-size:50px;
 margin-bottom:15px;
-opacity:0.9;
 }
 
-.tagline{
-font-size:22px;
-margin-bottom:10px;
-color:#ffcc00;
-font-weight:600;
-}
-
-.plan{
-font-size:18px;
-margin-bottom:30px;
-opacity:0.9;
+.hero p{
+font-size:20px;
+margin-bottom:25px;
 }
 
 .btn{
 display:inline-block;
-padding:16px 40px;
-font-size:18px;
+padding:14px 35px;
 background:#ff9800;
 color:white;
-border:none;
-border-radius:50px;
-cursor:pointer;
-transition:0.3s;
 text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,0.4);
-animation: pulse 2s infinite;
+border-radius:30px;
+transition:0.3s;
+margin:10px;
 }
 
 .btn:hover{
-transform:scale(1.1);
 background:#e65100;
+transform:scale(1.05);
 }
 
-@keyframes fadeIn{
-from{opacity:0}
-to{opacity:1}
+/* PLANS SECTION */
+.plans{
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#ff6a00,#ee0979);
+color:white;
 }
 
-@keyframes slideDown{
-from{transform:translateY(-50px);opacity:0}
-to{transform:translateY(0);opacity:1}
+.plans h2{
+font-size:38px;
+margin-bottom:40px;
 }
 
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(255,152,0,0.7);}
-70%{box-shadow:0 0 0 20px rgba(255,152,0,0);}
-100%{box-shadow:0 0 0 0 rgba(255,152,0,0);}
+.plan-container{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
 }
 
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:30px;
+width:300px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+.price{
+font-size:26px;
+margin-bottom:20px;
+color:#ffcc00;
+font-weight:600;
+}
+
+.card ul{
+list-style:none;
+margin-bottom:20px;
+}
+
+.card ul li{
+margin:8px 0;
+}
+
+/* SERVICE AREA */
+.service{
+padding:60px 20px;
+text-align:center;
+background:#fff;
+}
+
+.service h2{
+font-size:34px;
+margin-bottom:20px;
+}
+
+.service p{
+font-size:18px;
+line-height:30px;
+}
+
+/* FOOTER */
 footer{
-position:absolute;
-bottom:15px;
-font-size:14px;
-opacity:0.8;
+background:#333;
+color:white;
+text-align:center;
+padding:15px;
+}
+
+@media(max-width:768px){
+.plan-container{
+flex-direction:column;
+align-items:center;
+}
+.hero h1{
+font-size:35px;
+}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-<h1>Rathore Tiffin Service</h1>
+<!-- HERO -->
+<section class="hero">
+<h1>Rathore Tiffin Service 🍱</h1>
+<p>📍 Netaji Subhash Place</p>
+<p>Ghar Jaisa Khana | Monthly & Weekly Plans Available</p>
 
-<p class="location">📍 Netaji Subhash Place</p>
+<a href="#plans" class="btn">View Plans</a>
 
-<p class="tagline">Ghar Jaisa Khana 🍱</p>
-
-<p class="plan">Monthly & Weekly Subscription Available | Free Delivery</p>
-
-<a href="https://wa.me/917982774162?text=Hello%20Rathore%20Tiffin%20Service,%20I%20want%20to%20know%20about%20Monthly%20and%20Weekly%20Tiffin%20Plans." target="_blank" class="btn">
+<a href="https://wa.me/917982774162?text=Hello%20Rathore%20Tiffin%20Service,%20I%20want%20to%20book%20tiffin." 
+target="_blank" class="btn">
 Book Now on WhatsApp
 </a>
+</section>
+
+<!-- PLANS -->
+<section class="plans" id="plans">
+<h2>Our Tiffin Plans</h2>
+
+<div class="plan-container">
+
+<div class="card">
+<h3>Monthly Plan</h3>
+<p class="price">₹ 2500 / Month</p>
+<ul>
+<li>✔ 2 Sabzi + 4 Roti</li>
+<li>✔ Rice + Dal</li>
+<li>✔ Free Delivery</li>
+<li>✔ 30 Days Service</li>
+</ul>
+<a href="https://wa.me/917982774162?text=Hello%20I%20want%20to%20book%20Monthly%20Tiffin%20Plan." 
+target="_blank" class="btn">Select Plan</a>
+</div>
+
+<div class="card">
+<h3>Weekly Plan</h3>
+<p class="price">₹ 700 / Week</p>
+<ul>
+<li>✔ 2 Sabzi + 4 Roti</li>
+<li>✔ Rice + Dal</li>
+<li>✔ Free Delivery</li>
+<li>✔ 7 Days Service</li>
+</ul>
+<a href="https://wa.me/917982774162?text=Hello%20I%20want%20to%20book%20Weekly%20Tiffin%20Plan." 
+target="_blank" class="btn">Select Plan</a>
+</div>
 
 </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="service">
+<h2>📍 Service Areas</h2>
+<p>
+Pitampura<br>
+Kohat Enclave<br>
+Rani Bagh<br>
+Netaji Subhash Place
+</p>
+</section>
 
 <footer>
 © 2026 Rathore Tiffin Service | 📞 7982774162
@@ -144,4 +218,3 @@ Book Now on WhatsApp
 
 </body>
 </html>
-
