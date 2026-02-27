@@ -5,100 +5,129 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rathore Tiffin Service</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, sans-serif;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
   background:#fff;
+  color:#333;
 }
 
-/* HERO SECTION WITH CLEAR FOOD BACKGROUND */
+/* HERO */
 .hero{
-  position:relative;
-  background: url('https://images.unsplash.com/photo-1617196038431-5b5d1e4a1c2f');
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  color:white;
+  height:100vh;
+  background:url("food.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  padding:140px 20px;
+  position:relative;
+  color:#fff;
 }
 
 .hero::before{
   content:"";
   position:absolute;
-  top:0;
-  left:0;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.55);
+  background:rgba(0,0,0,0.65);
 }
 
-.hero h1,
-.hero p,
-.hero .btn{
+.hero-content{
   position:relative;
   z-index:2;
+  max-width:800px;
+  padding:20px;
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:52px;
+  font-weight:700;
   margin-bottom:15px;
 }
 
-.hero p{
-  font-size:20px;
-  margin-bottom:30px;
+.location{
+  font-size:18px;
+  margin-bottom:15px;
+}
+
+.tagline{
+  font-size:22px;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 
 .btn{
-  display:inline-block;
-  background:#25D366;
-  padding:15px 30px;
-  color:white;
+  padding:14px 35px;
+  border-radius:40px;
   text-decoration:none;
-  border-radius:30px;
-  font-weight:bold;
+  font-weight:600;
   transition:0.3s;
+  font-size:16px;
 }
 
-.btn:hover{
-  background:#1ebe5d;
+.btn-primary{
+  background:#ff9800;
+  color:#fff;
+}
+
+.btn-primary:hover{
+  background:#e68900;
+}
+
+.btn-outline{
+  border:2px solid #fff;
+  color:#fff;
+}
+
+.btn-outline:hover{
+  background:#fff;
+  color:#000;
+}
+
+/* SECTION TITLE */
+.section-title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:60px;
 }
 
 /* PLANS */
 .plans{
-  padding:80px 20px;
-  background:#fff5f2;
-  text-align:center;
-}
-
-.plans h2{
-  font-size:40px;
-  margin-bottom:50px;
-  color:#ff512f;
+  padding:100px 20px;
+  background:#f7f7f7;
 }
 
 .plan-container{
   display:flex;
   flex-wrap:wrap;
   justify-content:center;
-  gap:30px;
+  gap:40px;
 }
 
 .card{
-  background:white;
-  width:300px;
-  padding:35px;
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+  width:320px;
+  padding:40px;
   border-radius:20px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.2);
-  transition:0.4s;
-  position:relative;
+  box-shadow:0 15px 30px rgba(0,0,0,0.1);
+  transition:0.3s;
+  text-align:center;
 }
 
 .card:hover{
@@ -106,109 +135,130 @@ body{
 }
 
 .price{
-  color:#ff512f;
-  font-size:40px;
-  margin:15px 0;
-  font-weight:bold;
+  font-size:30px;
+  font-weight:700;
+  margin:20px 0;
+  color:#ff9800;
 }
 
-.best{
-  position:absolute;
-  top:-15px;
-  right:-15px;
-  background:#ff512f;
-  color:white;
-  padding:8px 15px;
-  border-radius:20px;
-  font-size:14px;
+.card p{
+  margin:10px 0;
 }
 
-/* SERVICE */
+/* SERVICE AREA */
 .service{
-  padding:70px 20px;
-  text-align:center;
-  background:#f4f4f4;
-}
-
-.service h2{
-  font-size:35px;
-  margin-bottom:30px;
+  padding:100px 20px;
 }
 
 .area-list{
-  font-size:18px;
-  line-height:35px;
+  text-align:center;
+  font-size:20px;
+  line-height:40px;
+}
+
+/* CTA */
+.cta{
+  padding:80px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#ff512f,#dd2476);
+  color:#fff;
+}
+
+.cta h2{
+  font-size:34px;
+  margin-bottom:20px;
 }
 
 /* FOOTER */
 footer{
-  background:#222;
-  color:white;
+  background:#111;
+  color:#aaa;
   text-align:center;
   padding:20px;
+  font-size:14px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{
+    font-size:36px;
+  }
+  .tagline{
+    font-size:18px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Rathore Tiffin Service</h1>
-  <p>Ghar Jaisa Khana – Monthly & Weekly Plans Available</p>
-  <a href="https://wa.me/917982774162?text=Hello%20I%20want%20to%20book%20a%20tiffin"
-     target="_blank" class="btn">Book Now on WhatsApp</a>
+  <div class="hero-content">
+    <h1>Rathore Tiffin Service 🍱</h1>
+    <div class="location">📍 Netaji Subhash Place</div>
+    <div class="tagline">Ghar Jaisa Khana | Fresh & Hygienic Meals</div>
+
+    <div class="hero-buttons">
+      <a href="#plans" class="btn btn-primary">View Plans</a>
+      <a href="https://wa.me/917982774162" target="_blank" class="btn btn-outline">Order Now</a>
+    </div>
+  </div>
 </section>
 
-<section class="plans">
-  <h2>Our Tiffin Options</h2>
-
+<!-- PLANS -->
+<section class="plans" id="plans">
+  <h2 class="section-title">Our Tiffin Plans</h2>
   <div class="plan-container">
 
     <div class="card">
-      <h3>70 Option</h3>
+      <h3>Basic Plan</h3>
       <div class="price">₹70</div>
       <p>✔ 2 Sabzi</p>
       <p>✔ 4 Roti</p>
       <p>✔ Raita</p>
       <br>
-      <a href="https://wa.me/917982774162?text=I%20want%2070%20Option"
-         target="_blank" class="btn">Book Now</a>
+      <a href="https://wa.me/917982774162" target="_blank" class="btn btn-primary">Book Now</a>
     </div>
 
     <div class="card">
-      <div class="best">Best Seller</div>
-      <h3>80 Option</h3>
+      <h3>Standard Plan</h3>
       <div class="price">₹80</div>
       <p>✔ 2 Sabzi</p>
       <p>✔ 2 Roti</p>
       <p>✔ Rice</p>
       <br>
-      <a href="https://wa.me/917982774162?text=I%20want%2080%20Option"
-         target="_blank" class="btn">Book Now</a>
+      <a href="https://wa.me/917982774162" target="_blank" class="btn btn-primary">Book Now</a>
     </div>
 
     <div class="card">
-      <h3>90 Option</h3>
+      <h3>Premium Plan</h3>
       <div class="price">₹90</div>
       <p>✔ 2 Sabzi</p>
       <p>✔ 4 Roti</p>
       <p>✔ Rice</p>
       <br>
-      <a href="https://wa.me/917982774162?text=I%20want%2090%20Option"
-         target="_blank" class="btn">Book Now</a>
+      <a href="https://wa.me/917982774162" target="_blank" class="btn btn-primary">Book Now</a>
     </div>
 
   </div>
 </section>
 
+<!-- SERVICE AREAS -->
 <section class="service">
-  <h2>Service Areas</h2>
+  <h2 class="section-title">Service Areas</h2>
   <div class="area-list">
     Pitampura <br>
     Kohat Enclave <br>
     Rani Bagh <br>
     Netaji Subhash Place
   </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Healthy & Hygienic Home Style Food Delivered Daily 🚀</h2>
+  <a href="https://wa.me/917982774162" target="_blank" class="btn btn-primary">Order Your Tiffin Now</a>
 </section>
 
 <footer>
