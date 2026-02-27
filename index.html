@@ -5,241 +5,287 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rathore Tiffin Service</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
 }
 
 body{
-background:#fff;
-color:#333;
+  background:#fff;
+  color:#333;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
-url('https://images.unsplash.com/photo-1604908176997-431d1e7fa05d?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:white;
-padding:20px;
+  height:100vh;
+  background:url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  color:#fff;
 }
 
-.hero-content h1{
-font-size:55px;
-margin-bottom:15px;
+.hero::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.65));
 }
 
-.hero-content p{
-font-size:20px;
-margin-bottom:30px;
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  padding:20px;
+}
+
+.hero h1{
+  font-size:52px;
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+.location{
+  font-size:18px;
+  margin-bottom:15px;
+}
+
+.tagline{
+  font-size:22px;
+  margin-bottom:35px;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-padding:14px 35px;
-background:#ff512f;
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:600;
-transition:0.3s;
+  padding:14px 35px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+  font-size:16px;
+  border:none;
+  cursor:pointer;
 }
 
-.btn:hover{
-background:#dd2476;
+.btn-primary{
+  background:#ff9800;
+  color:#fff;
 }
 
-/* SECTION COMMON */
-section{
-padding:80px 20px;
-text-align:center;
-}
-
-section h2{
-font-size:40px;
-margin-bottom:50px;
-color:#ff512f;
+.btn-primary:hover{
+  background:#e68900;
 }
 
 /* PLANS */
+.plans{
+  padding:100px 20px;
+  background:#f7f7f7;
+}
+
+.section-title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:60px;
+}
+
 .plan-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
 }
 
-.plan-card{
-background:white;
-width:320px;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.15);
-transition:0.3s;
+.card{
+  background:#fff;
+  width:320px;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.1);
+  transition:0.3s;
+  text-align:center;
 }
 
-.plan-card:hover{
-transform:translateY(-10px);
-}
-
-.plan-card h3{
-font-size:26px;
-margin-bottom:15px;
+.card:hover{
+  transform:translateY(-10px);
 }
 
 .price{
-font-size:28px;
-color:#ff512f;
-margin-bottom:15px;
-font-weight:700;
+  font-size:30px;
+  font-weight:700;
+  margin:20px 0;
+  color:#ff9800;
 }
 
-.plan-card ul{
-list-style:none;
-margin-bottom:20px;
+/* BOOKING SECTION */
+.booking{
+  padding:100px 20px;
+  text-align:center;
+  background:#fff;
 }
 
-.plan-card ul li{
-margin:8px 0;
+.booking form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
 }
 
-/* REVIEWS */
-.reviews{
-background:#fff5f2;
+.booking select,
+.booking input{
+  padding:15px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:16px;
 }
 
-.review-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
+/* CTA */
+.cta{
+  padding:80px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#ff512f,#dd2476);
+  color:#fff;
 }
 
-.review-card{
-background:white;
-width:300px;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
-transition:0.3s;
-}
-
-.review-card:hover{
-transform:translateY(-8px);
-}
-
-.review-card p{
-font-size:15px;
-margin-bottom:15px;
-}
-
-.review-card h4{
-color:#ffb400;
-margin-bottom:10px;
-}
-
-/* FOOTER */
 footer{
-background:#111;
-color:white;
-padding:25px;
-text-align:center;
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:20px;
+  font-size:14px;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media(max-width:768px){
-.hero-content h1{
-font-size:38px;
-}
+  .hero h1{
+    font-size:36px;
+  }
+  .tagline{
+    font-size:18px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<!-- HERO -->
 <section class="hero">
-<div class="hero-content">
-<h1>Rathore Tiffin Service</h1>
-<p>Ghar Jaisa Khana – Fresh & Hygienic</p>
-<a class="btn" href="https://wa.me/917982774162" target="_blank">Book Now on WhatsApp</a>
-</div>
+  <div class="hero-content">
+    <h1>Rathore Tiffin Service 🍱</h1>
+    <div class="location">📍 Netaji Subhash Place</div>
+    <div class="tagline">Ghar Jaisa Khana | Fresh & Hygienic Meals</div>
+
+    <div class="hero-buttons">
+      <a href="#plans" class="btn btn-primary">View Plans</a>
+    </div>
+  </div>
 </section>
 
-<!-- PLANS SECTION -->
-<section id="plans">
-<h2>Our Plans</h2>
-<div class="plan-container">
+<!-- PLANS -->
+<section class="plans" id="plans">
+  <h2 class="section-title">Our Tiffin Plans</h2>
+  <div class="plan-container">
+    <div class="card">
+      <h3>Basic Plan</h3>
+      <div class="price">₹70</div>
+      <p>2 Sabzi + 4 Roti + Raita</p>
+    </div>
 
-<div class="plan-card">
-<h3>Monthly Plan</h3>
-<div class="price">₹2500 / Month</div>
-<ul>
-<li>✔ Daily Fresh Tiffin</li>
-<li>✔ 2 Sabzi + 4 Roti</li>
-<li>✔ Rice + Salad</li>
-<li>✔ Free Delivery</li>
-</ul>
-<a class="btn" href="https://wa.me/917982774162" target="_blank">Subscribe Now</a>
-</div>
+    <div class="card">
+      <h3>Standard Plan</h3>
+      <div class="price">₹80</div>
+      <p>2 Sabzi + 2 Roti + Rice</p>
+    </div>
 
-<div class="plan-card">
-<h3>Weekly Plan</h3>
-<div class="price">₹700 / Week</div>
-<ul>
-<li>✔ Fresh Homemade Food</li>
-<li>✔ Balanced Diet</li>
-<li>✔ Hygienic Packing</li>
-<li>✔ Fast Delivery</li>
-</ul>
-<a class="btn" href="https://wa.me/917982774162" target="_blank">Order Now</a>
-</div>
-
-</div>
+    <div class="card">
+      <h3>Premium Plan</h3>
+      <div class="price">₹90</div>
+      <p>2 Sabzi + 4 Roti + Rice</p>
+    </div>
+  </div>
 </section>
 
-<!-- CUSTOMER REVIEWS -->
-<section class="reviews">
-<h2>What Our Customers Say</h2>
+<!-- BOOKING FORM -->
+<section class="booking">
+  <h2 class="section-title">Book Your Tiffin</h2>
 
-<div class="review-container">
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <select id="mealType" required>
+      <option value="">Select Meal Type</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
 
-<div class="review-card">
-<p>"Bahut hi tasty aur ghar jaisa khana milta hai. Delivery time par hoti hai!"</p>
-<h4>⭐⭐⭐⭐⭐</h4>
-<span>- Rohit Sharma</span>
-</div>
+    <input type="time" id="time" required>
 
-<div class="review-card">
-<p>"Monthly plan liya hua hai. Quality consistent rehti hai. Highly recommended."</p>
-<h4>⭐⭐⭐⭐⭐</h4>
-<span>- Neha Verma</span>
-</div>
+    <button type="submit" class="btn btn-primary">Book Your Tiffin</button>
+  </form>
+</section>
 
-<div class="review-card">
-<p>"Affordable price me best tiffin service in Netaji Subhash Place."</p>
-<h4>⭐⭐⭐⭐⭐</h4>
-<span>- Aman Gupta</span>
-</div>
-
-</div>
+<!-- CTA -->
+<section class="cta">
+  <h2>Healthy & Hygienic Home Style Food Delivered Daily 🚀</h2>
 </section>
 
 <footer>
-© 2026 Rathore Tiffin Service | Netaji Subhash Place | Contact: 7982774162
+  © 2026 Rathore Tiffin Service | +917982774162
 </footer>
+
+<script>
+function sendToWhatsApp(){
+  var meal = document.getElementById("mealType").value;
+  var time = document.getElementById("time").value;
+
+  var message = "Hello, I want to book a tiffin.%0A";
+  message += "Meal Type: " + meal + "%0A";
+  message += "Time: " + time;
+
+  window.open("https://wa.me/917982774162?text=" + message, "_blank");
+}
+</script>
 
 </body>
 </html>
+<!-- CUSTOMER REVIEWS -->
+<section class="reviews">
+  <h2>What Our Customers Say</h2>
+
+  <div class="review-container">
+
+    <div class="review-card">
+      <p>"Bahut hi tasty aur ghar jaisa khana milta hai. Delivery bhi time par hoti hai!"</p>
+      <h4>⭐⭐⭐⭐⭐</h4>
+      <span>- Rohit Sharma</span>
+    </div>
+
+    <div class="review-card">
+      <p>"Monthly plan liya hua hai, quality consistent rehti hai. Highly recommended."</p>
+      <h4>⭐⭐⭐⭐⭐</h4>
+      <span>- Neha Verma</span>
+    </div>
+
+    <div class="review-card">
+      <p>"Affordable price me best tiffin service in Netaji Subhash Place."</p>
+      <h4>⭐⭐⭐⭐⭐</h4>
+      <span>- Aman Gupta</span>
+    </div>
+
+  </div>
+</section>
+
