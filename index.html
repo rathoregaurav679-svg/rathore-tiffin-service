@@ -78,6 +78,8 @@ body{
   font-weight:600;
   transition:0.3s;
   font-size:16px;
+  border:none;
+  cursor:pointer;
 }
 
 .btn-primary{
@@ -89,27 +91,16 @@ body{
   background:#e68900;
 }
 
-.btn-outline{
-  border:2px solid #fff;
-  color:#fff;
-}
-
-.btn-outline:hover{
-  background:#fff;
-  color:#000;
-}
-
-/* SECTION TITLE */
-.section-title{
-  text-align:center;
-  font-size:36px;
-  margin-bottom:60px;
-}
-
 /* PLANS */
 .plans{
   padding:100px 20px;
   background:#f7f7f7;
+}
+
+.section-title{
+  text-align:center;
+  font-size:36px;
+  margin-bottom:60px;
 }
 
 .plan-container{
@@ -120,8 +111,7 @@ body{
 }
 
 .card{
-  background:rgba(255,255,255,0.7);
-  backdrop-filter:blur(10px);
+  background:#fff;
   width:320px;
   padding:40px;
   border-radius:20px;
@@ -141,19 +131,27 @@ body{
   color:#ff9800;
 }
 
-.card p{
-  margin:10px 0;
-}
-
-/* SERVICE AREA */
-.service{
+/* BOOKING SECTION */
+.booking{
   padding:100px 20px;
+  text-align:center;
+  background:#fff;
 }
 
-.area-list{
-  text-align:center;
-  font-size:20px;
-  line-height:40px;
+.booking form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.booking select,
+.booking input{
+  padding:15px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:16px;
 }
 
 /* CTA */
@@ -164,28 +162,12 @@ body{
   color:#fff;
 }
 
-.cta h2{
-  font-size:34px;
-  margin-bottom:20px;
-}
-
-/* FOOTER */
 footer{
   background:#111;
   color:#aaa;
   text-align:center;
   padding:20px;
   font-size:14px;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-  .hero h1{
-    font-size:36px;
-  }
-  .tagline{
-    font-size:18px;
-  }
 }
 </style>
 </head>
@@ -201,7 +183,6 @@ footer{
 
     <div class="hero-buttons">
       <a href="#plans" class="btn btn-primary">View Plans</a>
-      <a href="https://wa.me/917982774162" target="_blank" class="btn btn-outline">Order Now</a>
     </div>
   </div>
 </section>
@@ -210,60 +191,64 @@ footer{
 <section class="plans" id="plans">
   <h2 class="section-title">Our Tiffin Plans</h2>
   <div class="plan-container">
-
     <div class="card">
       <h3>Basic Plan</h3>
       <div class="price">₹70</div>
-      <p>✔ 2 Sabzi</p>
-      <p>✔ 4 Roti</p>
-      <p>✔ Raita</p>
-      <br>
-      <a href="https://wa.me/917982774162" target="_blank" class="btn btn-primary">Book Now</a>
+      <p>2 Sabzi + 4 Roti + Raita</p>
     </div>
 
     <div class="card">
       <h3>Standard Plan</h3>
       <div class="price">₹80</div>
-      <p>✔ 2 Sabzi</p>
-      <p>✔ 2 Roti</p>
-      <p>✔ Rice</p>
-      <br>
-      <a href="https://wa.me/917982774162" target="_blank" class="btn btn-primary">Book Now</a>
+      <p>2 Sabzi + 2 Roti + Rice</p>
     </div>
 
     <div class="card">
       <h3>Premium Plan</h3>
       <div class="price">₹90</div>
-      <p>✔ 2 Sabzi</p>
-      <p>✔ 4 Roti</p>
-      <p>✔ Rice</p>
-      <br>
-      <a href="https://wa.me/917982774162" target="_blank" class="btn btn-primary">Book Now</a>
+      <p>2 Sabzi + 4 Roti + Rice</p>
     </div>
-
   </div>
 </section>
 
-<!-- SERVICE AREAS -->
-<section class="service">
-  <h2 class="section-title">Service Areas</h2>
-  <div class="area-list">
-    Pitampura <br>
-    Kohat Enclave <br>
-    Rani Bagh <br>
-    Netaji Subhash Place
-  </div>
+<!-- BOOKING FORM -->
+<section class="booking">
+  <h2 class="section-title">Book Your Tiffin</h2>
+
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <select id="mealType" required>
+      <option value="">Select Meal Type</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+
+    <input type="time" id="time" required>
+
+    <button type="submit" class="btn btn-primary">Book Your Tiffin</button>
+  </form>
 </section>
 
 <!-- CTA -->
 <section class="cta">
   <h2>Healthy & Hygienic Home Style Food Delivered Daily 🚀</h2>
-  <a href="https://wa.me/917982774162" target="_blank" class="btn btn-primary">Order Your Tiffin Now</a>
 </section>
 
 <footer>
   © 2026 Rathore Tiffin Service | Free Home Delivery
 </footer>
+
+<script>
+function sendToWhatsApp(){
+  var meal = document.getElementById("mealType").value;
+  var time = document.getElementById("time").value;
+
+  var message = "Hello, I want to book a tiffin.%0A";
+  message += "Meal Type: " + meal + "%0A";
+  message += "Time: " + time;
+
+  window.open("https://wa.me/917982774162?text=" + message, "_blank");
+}
+</script>
 
 </body>
 </html>
