@@ -22,16 +22,17 @@ align-items:center;
 color:white;
 overflow:hidden;
 position:relative;
+text-align:center;
 }
 
-/* 🔥 Food Background */
+/* Food Background */
 body::before{
 content:"";
 position:absolute;
 width:100%;
 height:100%;
 background:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') no-repeat center center/cover;
-filter:blur(4px);
+filter:blur(5px);
 z-index:-2;
 }
 
@@ -41,29 +42,43 @@ content:"";
 position:absolute;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.6);
+background:rgba(0,0,0,0.65);
 z-index:-1;
 }
 
 .container{
-text-align:center;
 animation: fadeIn 1.5s ease-in-out;
+padding:20px;
 }
 
 h1{
-font-size:45px;
-margin-bottom:15px;
+font-size:48px;
+margin-bottom:10px;
 animation: slideDown 1.2s ease;
 }
 
-p{
-font-size:20px;
-margin-bottom:20px;
-opacity:0.95;
+.location{
+font-size:18px;
+margin-bottom:15px;
+opacity:0.9;
+}
+
+.tagline{
+font-size:22px;
+margin-bottom:10px;
+color:#ffcc00;
+font-weight:600;
+}
+
+.plan{
+font-size:18px;
+margin-bottom:30px;
+opacity:0.9;
 }
 
 .btn{
-padding:15px 35px;
+display:inline-block;
+padding:16px 40px;
 font-size:18px;
 background:#ff9800;
 color:white;
@@ -72,7 +87,8 @@ border-radius:50px;
 cursor:pointer;
 transition:0.3s;
 text-decoration:none;
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
+box-shadow:0 8px 20px rgba(0,0,0,0.4);
+animation: pulse 2s infinite;
 }
 
 .btn:hover{
@@ -90,6 +106,12 @@ from{transform:translateY(-50px);opacity:0}
 to{transform:translateY(0);opacity:1}
 }
 
+@keyframes pulse{
+0%{box-shadow:0 0 0 0 rgba(255,152,0,0.7);}
+70%{box-shadow:0 0 0 20px rgba(255,152,0,0);}
+100%{box-shadow:0 0 0 0 rgba(255,152,0,0);}
+}
+
 footer{
 position:absolute;
 bottom:15px;
@@ -103,14 +125,22 @@ opacity:0.8;
 
 <div class="container">
 <h1>Rathore Tiffin Service</h1>
-<p>📍 Netaji Subhash Place</p>
-<p><strong>Ghar Jaisa Khana</strong></p>
 
-<a href="booking.html" class="btn">Book Now</a>
+<p class="location">📍 Netaji Subhash Place</p>
+
+<p class="tagline">Ghar Jaisa Khana 🍱</p>
+
+<p class="plan">Monthly & Weekly Subscription Available | Free Delivery</p>
+
+<a href="https://wa.me/917982774162?text=Hello%20Rathore%20Tiffin%20Service,%20I%20want%20to%20know%20about%20Monthly%20and%20Weekly%20Tiffin%20Plans.%20Please%20share%20details." 
+target="_blank" class="btn">
+Book Now on WhatsApp
+</a>
+
 </div>
 
 <footer>
-© 2026 Rathore Tiffin Service
+© 2026 Rathore Tiffin Service | 📞 7982774162
 </footer>
 
 </body>
