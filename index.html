@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rathore Tiffin Service</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
 *{
 margin:0;
@@ -14,13 +15,34 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background: linear-gradient(135deg,#ff6a00,#ee0979);
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 color:white;
 overflow:hidden;
+position:relative;
+}
+
+/* 🔥 Food Background */
+body::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c') no-repeat center center/cover;
+filter:blur(4px);
+z-index:-2;
+}
+
+/* Dark Overlay */
+body::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+z-index:-1;
 }
 
 .container{
@@ -36,26 +58,26 @@ animation: slideDown 1.2s ease;
 
 p{
 font-size:20px;
-margin-bottom:30px;
-opacity:0.9;
+margin-bottom:20px;
+opacity:0.95;
 }
 
 .btn{
 padding:15px 35px;
 font-size:18px;
-background:white;
-color:#ee0979;
+background:#ff9800;
+color:white;
 border:none;
 border-radius:50px;
 cursor:pointer;
 transition:0.3s;
 text-decoration:none;
+box-shadow:0 5px 15px rgba(0,0,0,0.4);
 }
 
 .btn:hover{
 transform:scale(1.1);
-background:#000;
-color:#fff;
+background:#e65100;
 }
 
 @keyframes fadeIn{
@@ -76,6 +98,7 @@ opacity:0.8;
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
