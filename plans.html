@@ -1,185 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
+<title>Rathore Tiffin Service</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Plans - Rathore Tiffin Service</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
 body{
-background: linear-gradient(135deg,#ff6a00,#ee0979);
-color:white;
-text-align:center;
-padding:40px 20px;
+  margin:0;
+  font-family: Arial, sans-serif;
 }
 
-h1{
-font-size:40px;
-margin-bottom:10px;
+/* HERO SECTION */
+.hero{
+  background: linear-gradient(135deg,#ff512f,#dd2476);
+  color:white;
+  text-align:center;
+  padding:100px 20px;
 }
 
-.subtitle{
-margin-bottom:40px;
-opacity:0.9;
+.hero h1{
+  font-size:45px;
+  margin-bottom:10px;
 }
 
-.plans{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-margin-bottom:60px;
-}
-
-.card{
-background:rgba(255,255,255,0.15);
-backdrop-filter:blur(15px);
-padding:30px;
-width:320px;
-border-radius:20px;
-box-shadow:0 15px 30px rgba(0,0,0,0.3);
-transition:0.4s;
-}
-
-.card:hover{
-transform:translateY(-12px);
-}
-
-.card h2{
-margin-bottom:15px;
-font-size:26px;
-}
-
-.price{
-font-size:28px;
-margin-bottom:20px;
-color:#ffcc00;
-font-weight:600;
-}
-
-.features{
-list-style:none;
-margin-bottom:25px;
-}
-
-.features li{
-margin:8px 0;
+.hero p{
+  font-size:20px;
+  margin-bottom:30px;
 }
 
 .btn{
-display:inline-block;
-padding:12px 28px;
-background:#ff9800;
-color:white;
-border-radius:30px;
-text-decoration:none;
-transition:0.3s;
+  background:#25D366;
+  padding:15px 30px;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+  transition:0.3s;
 }
 
 .btn:hover{
-background:#e65100;
-transform:scale(1.05);
+  background:#1ebe5d;
 }
 
-.service-area{
-margin-top:30px;
+/* PLANS SECTION */
+.plans{
+  padding:80px 20px;
+  background: linear-gradient(135deg,#ff512f,#dd2476);
+  text-align:center;
+}
+
+.plans h2{
+  color:white;
+  font-size:40px;
+  margin-bottom:50px;
+}
+
+.plan-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+
+.card{
+  background:white;
+  width:300px;
+  padding:35px;
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.2);
+  transition:0.4s;
+  position:relative;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.price{
+  color:#ff512f;
+  font-size:40px;
+  margin:15px 0;
+}
+
+.best{
+  position:absolute;
+  top:-15px;
+  right:-15px;
+  background:#ff512f;
+  color:white;
+  padding:8px 15px;
+  border-radius:20px;
+  font-size:14px;
+}
+
+/* SERVICE AREA */
+.service{
+  padding:70px 20px;
+  text-align:center;
+  background:#f4f4f4;
+}
+
+.service h2{
+  font-size:35px;
+  margin-bottom:30px;
 }
 
 .area-list{
-margin-top:15px;
-font-size:18px;
-line-height:30px;
+  font-size:18px;
+  line-height:35px;
 }
 
-.home-btn{
-margin-top:40px;
-display:inline-block;
-text-decoration:none;
-color:white;
-border:2px solid white;
-padding:10px 25px;
-border-radius:25px;
-transition:0.3s;
-}
-
-.home-btn:hover{
-background:white;
-color:#ee0979;
-}
-
+/* FOOTER */
 footer{
-margin-top:50px;
-opacity:0.8;
-}
-
-@media(max-width:768px){
-.plans{
-flex-direction:column;
-align-items:center;
-}
+  background:#222;
+  color:white;
+  text-align:center;
+  padding:20px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>Our Tiffin Plans 🍱</h1>
-<p class="subtitle">Choose the perfect plan for your daily Ghar Jaisa Khana</p>
+<!-- HERO -->
+<section class="hero">
+  <h1>Rathore Tiffin Service</h1>
+  <p>Ghar Jaisa Khana – Monthly & Weekly Plans Available</p>
+  <a href="https://wa.me/917982774162?text=Hello%20Rathore%20Tiffin%20Service,%20I%20want%20to%20book%20a%20tiffin"
+     target="_blank" class="btn">Book Now on WhatsApp</a>
+</section>
 
-<div class="plans">
+<!-- PLANS -->
+<section class="plans">
+  <h2>Our Tiffin Options</h2>
 
-<div class="card">
-<h2>Monthly Plan</h2>
-<p class="price">₹ 2500 / Month</p>
-<ul class="features">
-<li>✔ 2 Sabzi + 4 Roti</li>
-<li>✔ Rice + Dal</li>
-<li>✔ Free Delivery</li>
-<li>✔ 30 Days Service</li>
-</ul>
-<a href="https://wa.me/917982774162?text=Hello%20I%20want%20to%20book%20Monthly%20Tiffin%20Plan." target="_blank" class="btn">
-Select Plan
-</a>
-</div>
+  <div class="plan-container">
 
-<div class="card">
-<h2>Weekly Plan</h2>
-<p class="price">₹ 700 / Week</p>
-<ul class="features">
-<li>✔ 2 Sabzi + 4 Roti</li>
-<li>✔ Rice + Dal</li>
-<li>✔ Free Delivery</li>
-<li>✔ 7 Days Service</li>
-</ul>
-<a href="https://wa.me/917982774162?text=Hello%20I%20want%20to%20book%20Weekly%20Tiffin%20Plan." target="_blank" class="btn">
-Select Plan
-</a>
-</div>
+    <div class="card">
+      <h3></h3>
+      <div class="price">Tiffin Price @70</div>
+      <p>✔ 2 Sabzi</p>
+      <p>✔ 4 Roti</p>
+      <p>✔ Raita</p>
 
-</div>
+      <a href="https://wa.me/917982774162?text=I%20want%20₹70%20Option"
+         target="_blank" class="btn">Book Now</a>
+    </div>
 
-<div class="service-area">
-<h2>📍 Service Areas</h2>
-<p class="area-list">
-Pitampura <br>
-Kohat Enclave <br>
-Rani Bagh <br>
-Netaji Subhash Place
-</p>
-</div>
+    <div class="card">
+      <div class="best">Best Seller</div>
+      <h3></h3>
+      <div class="price">Tiffin Price @80</div>
+      <p>✔ 2 Sabzi</p>
+      <p>✔ 2 Roti</p>
+      <p>✔ Rice</p>
 
-<a href="index.html" class="home-btn">⬅ Back to Home</a>
+      <a href="https://wa.me/917982774162?text=I%20want%20₹80%20Option"
+         target="_blank" class="btn">Book Now</a>
+    </div>
+
+    <div class="card">
+      <h3></h3>
+      <div class="price">Tiffin Price @90</div>
+      <p>✔ 2 Sabzi</p>
+      <p>✔ 4 Roti</p>
+      <p>✔ Rice</p>
+
+      <a href="https://wa.me/917982774162?text=I%20want%20₹90%20Option"
+         target="_blank" class="btn">Book Now</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="service">
+  <h2>Service Areas</h2>
+  <div class="area-list">
+    Pitampura <br>
+    Kohat Enclave <br>
+    Rani Bagh <br>
+    Netaji Subhash Place <br>
+  </div>
+</section>
 
 <footer>
-© 2026 Rathore Tiffin Service | 📞 7982774162
+  © 2026 Rathore Tiffin Service | Free Home Delivery
 </footer>
 
 </body>
