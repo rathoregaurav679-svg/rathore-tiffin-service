@@ -241,6 +241,54 @@ footer{
   </div>
 </section>
 
+<!-- MEAL BOOKING SECTION -->
+<section style="padding:100px 20px; background:#f7f7f7; text-align:center;">
+  <h2>When Do You Want Your Meal? 🍱</h2>
+
+  <form onsubmit="sendMealDetails(); return false;" 
+        style="max-width:500px; margin:auto; margin-top:40px; display:flex; flex-direction:column; gap:20px;">
+
+    <!-- Plan Selection -->
+    <select id="plan" required 
+      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
+      <option value="">Select Plan</option>
+      <option value="Basic Plan - ₹70">Basic Plan - ₹70</option>
+      <option value="Standard Plan - ₹80">Standard Plan - ₹80</option>
+      <option value="Premium Plan - ₹90">Premium Plan - ₹90</option>
+    </select>
+
+    <!-- Meal Type -->
+    <select id="mealType" required 
+      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
+      <option value="">Select Meal Type</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+
+    <!-- Time -->
+    <input type="time" id="mealTime" required 
+      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
+
+    <button type="submit" class="btn">Confirm Order</button>
+
+  </form>
+</section>
+
+<script>
+function sendMealDetails(){
+  var plan = document.getElementById("plan").value;
+  var meal = document.getElementById("mealType").value;
+  var time = document.getElementById("mealTime").value;
+
+  var message = "Hello, I want to order:%0A";
+  message += "Plan: " + plan + "%0A";
+  message += "Meal: " + meal + "%0A";
+  message += "Time: " + time;
+
+  window.open("https://wa.me/917982774162?text=" + message, "_blank");
+}
+</script>  
+
 <!-- PAYMENT POPUP -->
 <div class="payment-box" id="paymentBox">
   <div class="payment-content">
@@ -275,5 +323,6 @@ function closePayment(){
 
 </body>
 </html>
+
 
 
