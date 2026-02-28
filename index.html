@@ -191,7 +191,6 @@ footer{
     <a href="#plans" class="btn">View Plans</a>
   </div>
 </section>
-
 <!-- VEG MEALS SLIDER SECTION -->
 <section class="veg-section">
   <h2>Our Fresh Veg Meals 🍛</h2>
@@ -199,7 +198,7 @@ footer{
   <div class="slider">
     <div class="slide-track">
 
-      <!-- ITEM 1 -->
+      <!-- REPEAT SET 1 -->
       <div class="slide">
         <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" alt="Veg Thali">
         <div class="overlay">
@@ -208,7 +207,6 @@ footer{
         <h3>Classic Veg Thali</h3>
       </div>
 
-      <!-- ITEM 2 -->
       <div class="slide">
         <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b" alt="Paneer Butter Masala">
         <div class="overlay">
@@ -217,7 +215,6 @@ footer{
         <h3>Paneer Butter Masala</h3>
       </div>
 
-      <!-- ITEM 3 -->
       <div class="slide">
         <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7" alt="Dal Tadka">
         <div class="overlay">
@@ -226,9 +223,42 @@ footer{
         <h3>Dal Tadka</h3>
       </div>
 
-      <!-- ITEM 4 -->
       <div class="slide">
-        <img src="https://images.unsplash.com/photo-1617692855027-33b14f061079" alt="Mixed Veg Curry">
+        <img src="https://images.unsplash.com/photo-1625944525903-bf6d6f88cde6" alt="Mixed Veg Curry">
+        <div class="overlay">
+          <button onclick="orderDish('Mixed Veg Curry')" class="order-btn">Order Now</button>
+        </div>
+        <h3>Mixed Veg Curry</h3>
+      </div>
+
+      <!-- DUPLICATE SET (important for infinite effect) -->
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" alt="Veg Thali">
+        <div class="overlay">
+          <button onclick="orderDish('Veg Thali')" class="order-btn">Order Now</button>
+        </div>
+        <h3>Classic Veg Thali</h3>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b" alt="Paneer Butter Masala">
+        <div class="overlay">
+          <button onclick="orderDish('Paneer Butter Masala')" class="order-btn">Order Now</button>
+        </div>
+        <h3>Paneer Butter Masala</h3>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7" alt="Dal Tadka">
+        <div class="overlay">
+          <button onclick="orderDish('Dal Tadka')" class="order-btn">Order Now</button>
+        </div>
+        <h3>Dal Tadka</h3>
+      </div>
+
+      <div class="slide">
+        <img src="https://images.unsplash.com/photo-1625944525903-bf6d6f88cde6" alt="Mixed Veg Curry">
         <div class="overlay">
           <button onclick="orderDish('Mixed Veg Curry')" class="order-btn">Order Now</button>
         </div>
@@ -250,13 +280,12 @@ footer{
 .slider{
   margin-top:50px;
   overflow:hidden;
-  position:relative;
 }
 
 .slide-track{
   display:flex;
   width:calc(300px * 8);
-  animation:scroll 20s linear infinite;
+  animation:scroll 25s linear infinite;
 }
 
 .slide{
@@ -309,6 +338,10 @@ footer{
 
 .order-btn:hover{
   background:#e68900;
+}
+
+.slider:hover .slide-track{
+  animation-play-state: paused;
 }
 
 @keyframes scroll{
@@ -444,6 +477,7 @@ function closePayment(){
 
 </body>
 </html>
+
 
 
 
