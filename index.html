@@ -24,7 +24,7 @@ body{
 /* HERO */
 .hero{
   height:100vh;
-  background:url("https://images.unsplash.com/photo-1546069901-ba9599a7e63c") center/cover no-repeat;
+  background:url("68919daba32aab2b60df0d3a_1754373547067.jpg") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -49,14 +49,14 @@ body{
 }
 
 .hero h1{
-  font-size:52px;
+  font-size:50px;
   font-weight:700;
   margin-bottom:15px;
 }
 
 .tagline{
-  font-size:22px;
-  margin-bottom:35px;
+  font-size:20px;
+  margin-bottom:30px;
 }
 
 .btn{
@@ -76,33 +76,6 @@ body{
   background:#e68900;
 }
 
-/* STATS */
-.stats{
-  padding:80px 20px;
-  background:#fff3e0;
-  text-align:center;
-}
-
-.stats-container{
-  display:flex;
-  justify-content:center;
-  gap:50px;
-  flex-wrap:wrap;
-}
-
-.stat-box{
-  font-size:40px;
-  font-weight:700;
-  color:#ff5722;
-}
-
-.stat-box span{
-  display:block;
-  font-size:18px;
-  color:#333;
-  margin-top:10px;
-}
-
 /* GALLERY */
 .gallery{
   padding:100px 20px;
@@ -119,12 +92,57 @@ body{
 .gallery img{
   width:100%;
   border-radius:20px;
-  transition:0.4s;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
+  transition:0.4s;
 }
 
 .gallery img:hover{
   transform:scale(1.05);
+}
+
+/* BOOKING */
+.booking{
+  padding:100px 20px;
+  background:#f7f7f7;
+  text-align:center;
+}
+
+.booking form{
+  max-width:500px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.booking select,
+.booking input{
+  padding:15px;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:16px;
+}
+
+/* SERVICE AREA HOVER */
+.service-hover{
+  position:relative;
+  display:inline-block;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.service-dropdown{
+  display:none;
+  position:absolute;
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+  margin-top:10px;
+}
+
+.service-hover:hover .service-dropdown{
+  display:block;
 }
 
 /* MAP */
@@ -143,14 +161,7 @@ body{
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* CTA */
-.cta{
-  padding:80px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#ff512f,#dd2476);
-  color:#fff;
-}
-
+/* FOOTER */
 footer{
   background:#111;
   color:#aaa;
@@ -172,7 +183,7 @@ footer{
 }
 
 @media(max-width:768px){
-  .hero h1{ font-size:36px; }
+  .hero h1{ font-size:35px; }
 }
 </style>
 </head>
@@ -182,17 +193,8 @@ footer{
 <section class="hero">
   <div class="hero-content">
     <h1>Rathore Tiffin Service 🍱</h1>
-    <p class="tagline">Ghar Jaisa Khana | Fresh & Hygienic Meals | Netaji Subhash Place</p>
+    <p class="tagline">Ghar Jaisa Khana | Fresh & Hygienic Meals</p>
     <a href="#gallery" class="btn">View Menu</a>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats">
-  <div class="stats-container">
-    <div class="stat-box"><span class="counter" data-target="1200">0</span>+<span>Happy Customers</span></div>
-    <div class="stat-box"><span class="counter" data-target="5000">0</span>+<span>Meals Delivered</span></div>
-    <div class="stat-box"><span class="counter" data-target="4">0</span><span>Service Areas</span></div>
   </div>
 </section>
 
@@ -200,69 +202,51 @@ footer{
 <section class="gallery" id="gallery">
   <h2>Our Fresh Meals 🍛</h2>
   <div class="gallery-container">
-    <img src="https://images.unsplash.com/photo-1604908177522-040e4e5c9b0b">
-    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
-    <img src="https://images.unsplash.com/photo-1617196039897-5a1b5e5e4d16">
-    <img src="https://images.unsplash.com/photo-1604908176997-431e84d8886a">
+    <img src="2025-03-02.jpg">
+    <img src="2025-09-20.jpg">
+    <img src="2025-10-27.jpg">
+    <img src="68919daba32aab2b60df0d3a_1754373547067.jpg">
   </div>
 </section>
 
-<!-- GOOGLE MAP SECTION -->
+<!-- BOOKING -->
+<section class="booking">
+  <h2>Book Your Tiffin 🍱</h2>
+
+  <form onsubmit="sendToWhatsApp(); return false;">
+    <select id="mealType" required>
+      <option value="">Select Meal</option>
+      <option value="Lunch">Lunch</option>
+      <option value="Dinner">Dinner</option>
+    </select>
+
+    <input type="time" id="time" required>
+
+    <button type="submit" class="btn">Book Now</button>
+  </form>
+</section>
+
+<!-- SERVICE AREA -->
+<section style="padding:60px;text-align:center;background:#fff3e0;">
+  <div class="service-hover">
+    🚚 Service Areas
+    <div class="service-dropdown">
+      Netaji Subhash Place<br>
+      Pitampura<br>
+      Kohat Enclave<br>
+      Rani Bagh
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
 <section class="map">
   <h2>Find Us Here 📍</h2>
-
   <iframe 
     src="https://www.google.com/maps?q=NO-18,A-09,GD,ITL,NORTHEX,TOWER,Netaji,Subhash,Place,Pitampura,Delhi,110034&output=embed">
   </iframe>
-
-  <br><br>
-
-  <a 
-    href="https://www.google.com/maps/search/?api=1&query=NO-18,A-09,GD,ITL,NORTHEX,TOWER,Netaji,Subhash,Place,Pitampura,Delhi,110034" 
-    target="_blank" 
-    class="btn">
-    Open in Google Maps
-  </a>
-
 </section>
 
-<style>
-.map{
-  padding:100px 20px;
-  text-align:center;
-  background:#f7f7f7;
-}
-
-.map iframe{
-  width:100%;
-  max-width:900px;
-  height:400px;
-  border-radius:20px;
-  border:none;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
-</style>
-
-<section class="cta">
-  <h2>Book Your Monthly Tiffin Today 🚀</h2>
-  <a href="https://wa.me/917982774162" class="btn" target="_blank">Book Now on WhatsApp</a>
-</section
-
-  <section id="contact" class="contact">
-  <h2 class="section-title">Contact Us 📞</h2>
-  <p>📍 Netaji Subhash Place, Delhi</p>
-  <p>📱 +91 7982774162</p>
-  <p>🚚 Service Areas: Pitampura, Kohat Enclave, Rani Bagh</p>
-</section>
-
-<style>
-.contact{
-  padding:80px 20px;
-  text-align:center;
-  background:#fff3e0;
-}
-</style>
-  
 <footer>
   © 2026 Rathore Tiffin Service | +91 7982774162
 </footer>
@@ -272,35 +256,17 @@ Chat on WhatsApp
 </a>
 
 <script>
-const counters = document.querySelectorAll('.counter');
-const speed = 200;
+function sendToWhatsApp(){
+  var meal = document.getElementById("mealType").value;
+  var time = document.getElementById("time").value;
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      counters.forEach(counter => {
-        const update = () => {
-          const target = +counter.getAttribute('data-target');
-          const count = +counter.innerText;
-          const inc = target / speed;
-          if(count < target){
-            counter.innerText = Math.ceil(count + inc);
-            setTimeout(update, 10);
-          } else {
-            counter.innerText = target;
-          }
-        };
-        update();
-      });
-      observer.disconnect();
-    }
-  });
-});
+  var message = "Hello, I want to book a tiffin.%0A";
+  message += "Meal: " + meal + "%0A";
+  message += "Delivery Time: " + time;
 
-observer.observe(document.querySelector('.stats'));
+  window.open("https://wa.me/917982774162?text=" + message, "_blank");
+}
 </script>
 
 </body>
 </html>
-
-
