@@ -24,7 +24,7 @@ body{
 /* HERO */
 .hero{
   height:100vh;
-  background:url("https://images.unsplash.com/photo-1504674900247-0877df9cc836") center/cover no-repeat;
+  background:url("https://images.unsplash.com/photo-1546833999-b9f581a1996d") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -37,7 +37,7 @@ body{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.55);
+  background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65));
 }
 
 .hero-content{
@@ -61,7 +61,6 @@ body{
 .btn{
   padding:14px 35px;
   border-radius:40px;
-  text-decoration:none;
   font-weight:600;
   transition:0.3s;
   font-size:16px;
@@ -69,7 +68,6 @@ body{
   cursor:pointer;
   background:#ff9800;
   color:#fff;
-  display:inline-block;
 }
 
 .btn:hover{
@@ -101,52 +99,52 @@ body{
   transform:scale(1.08);
 }
 
-/* BOOKING */
-.booking{
+/* PLANS */
+.plans{
   padding:100px 20px;
-  background:#f7f7f7;
   text-align:center;
+  background:#fff3e0;
 }
 
-.booking form{
-  max-width:500px;
-  margin:auto;
+.plan-container{
   display:flex;
-  flex-direction:column;
-  gap:20px;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+  margin-top:50px;
 }
 
-.booking select,
-.booking input{
-  padding:15px;
-  border-radius:10px;
-  border:1px solid #ddd;
-  font-size:16px;
-}
-
-/* SERVICE AREA */
-.service-hover{
-  position:relative;
-  display:inline-block;
-  cursor:pointer;
-  font-weight:600;
-}
-
-.service-dropdown{
-  display:none;
-  position:absolute;
+.plan{
   background:#fff;
-  padding:15px;
-  border-radius:10px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
-  margin-top:10px;
+  padding:30px;
+  border-radius:20px;
+  width:300px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transition:0.3s;
 }
 
-.service-hover:hover .service-dropdown{
-  display:block;
+.plan:hover{
+  transform:translateY(-8px);
 }
 
-/* MAP */
+/* PAYMENT POPUP */
+.payment-box{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  justify-content:center;
+  align-items:center;
+}
+
+.payment-content{
+  background:#fff;
+  padding:40px;
+  border-radius:20px;
+  text-align:center;
+  width:300px;
+}
+
 .map{
   padding:100px 20px;
   text-align:center;
@@ -162,7 +160,6 @@ body{
   box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* FOOTER */
 footer{
   background:#111;
   color:#aaa;
@@ -180,11 +177,6 @@ footer{
   border-radius:50px;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-@media(max-width:768px){
-  .hero h1{ font-size:35px; }
 }
 </style>
 </head>
@@ -196,92 +188,94 @@ footer{
   <div class="hero-content">
     <h1>Rathore Tiffin Service 🍱</h1>
     <p class="tagline">Ghar Jaisa Khana | Fresh & Hygienic Veg Meals</p>
-    <a href="#gallery" class="btn">View Menu</a>
+    <a href="#plans" class="btn">View Plans</a>
   </div>
 </section>
 
 <!-- FRESH VEG MEALS -->
-<section class="gallery" id="gallery">
+<section class="gallery">
   <h2>Our Fresh Veg Meals 🍛</h2>
-
   <div class="gallery-container">
-    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" alt="Indian Veg Thali">
-    <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b" alt="Paneer Curry">
-    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7" alt="Dal Roti Sabzi">
-    <img src="https://images.unsplash.com/photo-1617692855027-33b14f061079" alt="Mixed Veg Curry">
+    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
+    <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b">
+    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7">
+    <img src="https://images.unsplash.com/photo-1617692855027-33b14f061079">
   </div>
 </section>
 
-<!-- BOOKING -->
-<section class="booking">
-  <h2>Book Your Tiffin 🍱</h2>
+<!-- PLANS -->
+<section class="plans" id="plans">
+  <h2>Choose Your Tiffin Plan 🍱</h2>
+  <div class="plan-container">
 
-  <form onsubmit="sendToWhatsApp(); return false;">
-    <select id="mealType" required>
-      <option value="">Select Meal</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Dinner">Dinner</option>
-    </select>
-
-    <input type="time" id="time" required>
-
-    <button type="submit" class="btn">Book Now</button>
-  </form>
-</section>
-
-<!-- SERVICE AREA -->
-<section style="padding:60px;text-align:center;background:#fff3e0;">
-  <div class="service-hover">
-    🚚 Service Areas
-    <div class="service-dropdown">
-      Netaji Subhash Place<br>
-      Pitampura<br>
-      Kohat Enclave<br>
-      Rani Bagh
+    <div class="plan">
+      <h3>Basic Plan</h3>
+      <h2>₹70</h2>
+      <p>2 Sabzi</p>
+      <p>4 Roti</p>
+      <p>Raita</p>
+      <br>
+      <button class="btn" onclick="openPayment('Basic - ₹70')">Select Plan</button>
     </div>
+
+    <div class="plan">
+      <h3>Standard Plan</h3>
+      <h2>₹80</h2>
+      <p>2 Sabzi</p>
+      <p>2 Roti</p>
+      <p>Rice</p>
+      <br>
+      <button class="btn" onclick="openPayment('Standard - ₹80')">Select Plan</button>
+    </div>
+
+    <div class="plan">
+      <h3>Premium Plan</h3>
+      <h2>₹90</h2>
+      <p>2 Sabzi</p>
+      <p>4 Roti</p>
+      <p>Rice</p>
+      <br>
+      <button class="btn" onclick="openPayment('Premium - ₹90')">Select Plan</button>
+    </div>
+
   </div>
 </section>
+
+<!-- PAYMENT POPUP -->
+<div class="payment-box" id="paymentBox">
+  <div class="payment-content">
+    <h3>Pay via UPI</h3>
+    <p id="selectedPlan"></p>
+    <p><b>UPI ID:</b> yourupi@okaxis</p>
+    <br>
+    <button class="btn" onclick="closePayment()">Close</button>
+  </div>
+</div>
 
 <!-- MAP -->
 <section class="map">
   <h2>Find Us Here 📍</h2>
-
-  <iframe 
-    src="https://www.google.com/maps?q=Rathore+Tiffin+Service+Netaji+Subhash+Place&output=embed"
-    loading="lazy">
-  </iframe>
-
-  <br><br>
-
-  <a href="https://www.google.com/search?q=rathore+tiffin+service"
-     target="_blank"
-     class="btn">
-     🔍 View on Google
-  </a>
+  <iframe src="https://www.google.com/maps?q=Netaji+Subhash+Place+Delhi&output=embed"></iframe>
 </section>
-
 
 <a href="https://wa.me/917982774162" class="whatsapp-btn" target="_blank">
 Chat on WhatsApp
 </a>
 
+<footer>
+  © 2026 Rathore Tiffin Service | +91 7982774162
+</footer>
+
 <script>
-function sendToWhatsApp(){
-  var meal = document.getElementById("mealType").value;
-  var time = document.getElementById("time").value;
+function openPayment(plan){
+  document.getElementById("paymentBox").style.display="flex";
+  document.getElementById("selectedPlan").innerText="Selected: "+plan;
+}
 
-  var message = "Hello, I want to book a tiffin.%0A";
-  message += "Meal: " + meal + "%0A";
-  message += "Delivery Time: " + time;
-
-  window.open("https://wa.me/917982774162?text=" + message, "_blank");
+function closePayment(){
+  document.getElementById("paymentBox").style.display="none";
 }
 </script>
 
 </body>
 </html>
-
-<footer>
-  © 2026 Rathore Tiffin Service | +91 7982774162
-</footer>
-
