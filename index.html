@@ -24,7 +24,7 @@ body{
 /* HERO */
 .hero{
   height:100vh;
-  background:url("68919daba32aab2b60df0d3a_1754373547067.jpg") center/cover no-repeat;
+  background:url("2025-10-27.jpg") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -36,9 +36,8 @@ body{
 .hero::before{
   content:"";
   position:absolute;
-  width:100%;
-  height:100%;
-  background:linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.7));
+  inset:0;
+  background:rgba(0,0,0,0.55);
 }
 
 .hero-content{
@@ -70,6 +69,7 @@ body{
   cursor:pointer;
   background:#ff9800;
   color:#fff;
+  display:inline-block;
 }
 
 .btn:hover{
@@ -123,7 +123,7 @@ body{
   font-size:16px;
 }
 
-/* SERVICE AREA HOVER */
+/* SERVICE AREA */
 .service-hover{
   position:relative;
   display:inline-block;
@@ -190,6 +190,7 @@ footer{
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h1>Rathore Tiffin Service 🍱</h1>
@@ -202,10 +203,10 @@ footer{
 <section class="gallery" id="gallery">
   <h2>Our Fresh Meals 🍛</h2>
   <div class="gallery-container">
-    <img src="2025-03-02.jpg">
-    <img src="2025-09-20.jpg">
-    <img src="2025-10-27.jpg">
-    <img src="68919daba32aab2b60df0d3a_1754373547067.jpg">
+    <img src="2025-03-02.jpg" alt="">
+    <img src="2025-09-20.jpg" alt="">
+    <img src="2025-10-27.jpg" alt="">
+    <img src="68919daba32aab2b60df0d3a_1754373547067.jpg" alt="">
   </div>
 </section>
 
@@ -242,9 +243,19 @@ footer{
 <!-- MAP -->
 <section class="map">
   <h2>Find Us Here 📍</h2>
+
   <iframe 
-    src=https://www.google.com/search?q=rathore+tiffin+service&sca_esv=643cd21dc826a565&sxsrf=ANbL-n6UbPLZPoM36Z20jVoBtwG_vUF49A%3A1772295034461&ei=ehOjaersG7yUseMP3JCoyQQ&biw=1280&bih=593&oq=rathore+tiffin+service&gs_lp=Egxnd3Mtd2l6LXNlcnAiFnJhdGhvcmUgdGlmZmluIHNlcnZpY2UqAggAMgoQIxiABBgnGIoFMgQQIxgnMgQQIxgnMgIQJjILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMgsQABiABBiGAxiKBTILEAAYgAQYhgMYigUyCxAAGIAEGIYDGIoFMggQABiABBiiBEiKN1D-Bli4KnABeACQAQGYAYMCoAHyGaoBBjAuMjAuMbgBAcgBAPgBAZgCEqACtxbCAg0QABiABBiwAxhDGIoFwgIOEC4YgAQYsAMYxwEYrwHCAgcQABiwAxgewgIOEAAYgAQYsAMYhgMYigXCAggQABiwAxjvBcICCxAuGIAEGMcBGK8BwgIFEAAYgATCAgYQABgWGB7CAgUQABjvBcICGhAuGIAEGMcBGK8BGJcFGNwEGN4EGOAE2AEBwgIQEC4YgAQYQxjHARiKBRivAcICChAAGIAEGBQYhwLCAgoQABiABBhDGIoFwgIfEC4YgAQYQxjHARiKBRivARiXBRjcBBjeBBjgBNgBAcICBxAAGIAEGArCAgsQABiABBiRAhiKBZgDAIgGAZAGCroGBggBEAEYFJIHBjEuMTUuMqAH8usBsgcGMC4xNS4yuAeXFsIHCDItMS4xNS4yyAfeAYAIAA&sclient=gws-wiz-serp
+    src="https://www.google.com/maps?q=Rathore+Tiffin+Service+Netaji+Subhash+Place&output=embed"
+    loading="lazy">
   </iframe>
+
+  <br><br>
+
+  <a href="https://www.google.com/search?q=rathore+tiffin+service"
+     target="_blank"
+     class="btn">
+     🔍 View on Google
+  </a>
 </section>
 
 <footer>
@@ -270,4 +281,3 @@ function sendToWhatsApp(){
 
 </body>
 </html>
-
