@@ -24,7 +24,7 @@ body{
 /* HERO */
 .hero{
   height:100vh;
-  background:url("2025-10-27.jpg") center/cover no-repeat;
+  background:url("2025-09-20.jpg") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -37,7 +37,7 @@ body{
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,0.55);
+  background:rgba(0,0,0,0.6);
 }
 
 .hero-content{
@@ -94,10 +94,55 @@ body{
   border-radius:20px;
   box-shadow:0 10px 25px rgba(0,0,0,0.15);
   transition:0.4s;
+  height:280px;
+  object-fit:cover;
 }
 
 .gallery img:hover{
   transform:scale(1.05);
+}
+
+/* SLIDER */
+.meal-slider{
+  padding:100px 20px;
+  text-align:center;
+  background:#fff3e0;
+}
+
+.slider-container{
+  max-width:700px;
+  margin:auto;
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+}
+
+.slide{
+  display:none;
+  position:relative;
+}
+
+.slide img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.slide-text{
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding:10px 25px;
+  border-radius:30px;
+  font-weight:600;
+}
+
+.active{
+  display:block;
 }
 
 /* BOOKING */
@@ -123,28 +168,6 @@ body{
   font-size:16px;
 }
 
-/* SERVICE AREA */
-.service-hover{
-  position:relative;
-  display:inline-block;
-  cursor:pointer;
-  font-weight:600;
-}
-
-.service-dropdown{
-  display:none;
-  position:absolute;
-  background:#fff;
-  padding:15px;
-  border-radius:10px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
-  margin-top:10px;
-}
-
-.service-hover:hover .service-dropdown{
-  display:block;
-}
-
 /* MAP */
 .map{
   padding:100px 20px;
@@ -158,10 +181,8 @@ body{
   height:400px;
   border-radius:20px;
   border:none;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* FOOTER */
 footer{
   background:#111;
   color:#aaa;
@@ -179,11 +200,6 @@ footer{
   border-radius:50px;
   text-decoration:none;
   font-weight:600;
-  box-shadow:0 5px 15px rgba(0,0,0,0.2);
-}
-
-@media(max-width:768px){
-  .hero h1{ font-size:35px; }
 }
 </style>
 </head>
@@ -203,10 +219,31 @@ footer{
 <section class="gallery" id="gallery">
   <h2>Our Fresh Meals 🍛</h2>
   <div class="gallery-container">
-    <img src="2025-03-02.jpg" alt="">
-    <img src="2025-09-20.jpg" alt="">
-    <img src="2025-10-27.jpg" alt="">
-    <img src="68919daba32aab2b60df0d3a_1754373547067.jpg" alt="">
+    <img src="2025-03-02.jpg" alt="Lunch">
+    <img src="2025-09-20.jpg" alt="Lunch">
+    <img src="68919daba32aab2b60df0d3a_1754373547067.jpg" alt="Dinner">
+  </div>
+</section>
+
+<!-- SLIDER -->
+<section class="meal-slider">
+  <h2>Lunch & Dinner Specials 🍽️</h2>
+
+  <div class="slider-container">
+    <div class="slide active">
+      <img src="2025-03-02.jpg">
+      <div class="slide-text">Lunch Special</div>
+    </div>
+
+    <div class="slide">
+      <img src="2025-09-20.jpg">
+      <div class="slide-text">Lunch Special</div>
+    </div>
+
+    <div class="slide">
+      <img src="68919daba32aab2b60df0d3a_1754373547067.jpg">
+      <div class="slide-text">Dinner Special</div>
+    </div>
   </div>
 </section>
 
@@ -225,37 +262,6 @@ footer{
 
     <button type="submit" class="btn">Book Now</button>
   </form>
-</section>
-
-<!-- SERVICE AREA -->
-<section style="padding:60px;text-align:center;background:#fff3e0;">
-  <div class="service-hover">
-    🚚 Service Areas
-    <div class="service-dropdown">
-      Netaji Subhash Place<br>
-      Pitampura<br>
-      Kohat Enclave<br>
-      Rani Bagh
-    </div>
-  </div>
-</section>
-
-<!-- MAP -->
-<section class="map">
-  <h2>Find Us Here 📍</h2>
-
-  <iframe 
-    src="https://www.google.com/maps?q=Rathore+Tiffin+Service+Netaji+Subhash+Place&output=embed"
-    loading="lazy">
-  </iframe>
-
-  <br><br>
-
-  <a href="https://www.google.com/search?q=rathore+tiffin+service"
-     target="_blank"
-     class="btn">
-     🔍 View on Google
-  </a>
 </section>
 
 <footer>
@@ -277,6 +283,18 @@ function sendToWhatsApp(){
 
   window.open("https://wa.me/917982774162?text=" + message, "_blank");
 }
+
+let slides = document.querySelectorAll(".slide");
+let index = 0;
+
+function showSlide(){
+  slides.forEach(slide => slide.classList.remove("active"));
+  index++;
+  if(index >= slides.length){ index = 0; }
+  slides[index].classList.add("active");
+}
+
+setInterval(showSlide, 3000);
 </script>
 
 </body>
