@@ -663,7 +663,103 @@ slider.addEventListener("mousemove", (e) => {
   </div>
 </section>
 
-<!-- ===== CUSTOMER REVIEW SECTION END ===== --> 
+<!-- ===== CUSTOMER REVIEW SECTION END ===== -->
+
+<!-- ===== ANIMATED STATS SECTION START ===== -->
+
+<style>
+.stats-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff6f00, #ff9800);
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.stat-number {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-container {
+    gap: 40px;
+  }
+}
+</style>
+
+<section class="stats-section">
+  <div class="stats-container">
+
+    <div class="stat-box">
+      <span class="stat-number" data-target="500">0</span>
+      👨‍🍳 Happy Customers
+    </div>
+
+    <div class="stat-box">
+      <span class="stat-number" data-target="10000">0</span>
+      🍱 Tiffins Delivered
+    </div>
+
+    <div class="stat-box">
+      <span class="stat-number" data-target="4.9">0</span>
+      ⭐ Rating
+    </div>
+
+  </div>
+</section>
+
+<script>
+const counters = document.querySelectorAll('.stat-number');
+const speed = 200;
+
+const animateCounters = () => {
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / speed;
+
+      if (count < target) {
+        counter.innerText = (count + increment).toFixed(target % 1 !== 0 ? 1 : 0);
+        setTimeout(updateCount, 10);
+      } else {
+        counter.innerText = target + (target >= 1000 ? '+' : '+');
+      }
+    };
+    updateCount();
+  });
+};
+
+let started = false;
+window.addEventListener('scroll', () => {
+  const section = document.querySelector('.stats-section');
+  const sectionTop = section.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if (sectionTop < screenHeight && !started) {
+    animateCounters();
+    started = true;
+  }
+});
+</script>
+
+<!-- ===== ANIMATED STATS SECTION END ===== -->  
 
 <script>
 function sendMealDetails(){
@@ -714,6 +810,7 @@ function closePayment(){
 
 </body>
 </html>
+
 
 
 
