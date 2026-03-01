@@ -482,7 +482,16 @@ slider.addEventListener("mousemove", (e) => {
       <option value="">Select Meal Type</option>
       <option value="Lunch">Lunch</option>
       <option value="Dinner">Dinner</option>
-    </select>
+    </select>    
+
+    <!-- Time -->
+    <input type="time" id="mealTime" required 
+      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
+
+    <button type="submit" class="btn">Confirm Order</button>
+
+  </form>
+</section>
 
 <!-- Customer Reviews Section -->
 <section class="reviews-section">
@@ -509,16 +518,7 @@ slider.addEventListener("mousemove", (e) => {
     </div>
 
   </div>
-</section>    
-
-    <!-- Time -->
-    <input type="time" id="mealTime" required 
-      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
-
-    <button type="submit" class="btn">Confirm Order</button>
-
-  </form>
-</section>
+</section>  
 
 <script>
 function sendMealDetails(){
@@ -569,6 +569,7 @@ function closePayment(){
 
 </body>
 </html>
+
 
 
 
