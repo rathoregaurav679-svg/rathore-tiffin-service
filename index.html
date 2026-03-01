@@ -22,119 +22,7 @@
 
 <!-- Yaha se website ka content start hota hai -->
 
-</body> 
-
-<!-- ===== NAVBAR START ===== -->
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-/* Navbar */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: linear-gradient(90deg, #e65100, #ff9800);
-  padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.logo {
-  color: white;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links li {
-  display: inline;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #3e2723;
-}
-
-/* Mobile Menu */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  color: white;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #ff9800;
-    width: 200px;
-    flex-direction: column;
-    text-align: center;
-    display: none;
-    padding: 20px 0;
-  }
-
-  .nav-links li {
-    margin: 15px 0;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-}
-
-/* Body padding to avoid overlap */
-body {
-  padding-top: 80px;
-}
-</style>
-
-<nav class="navbar">
-  <div class="logo">Rathore Tiffin Service</div>
-
-  <ul class="nav-links" id="navLinks">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Menu</a></li>
-    <li><a href="#">Plans</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-
-  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-</nav>
-
-<script>
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("active");
-}
-</script>
-
-<!-- ===== NAVBAR END ===== -->
-  
+</body>  
 </html>
   
 <meta charset="UTF-8">
@@ -928,6 +816,7 @@ function closePayment(){
 
 </body>
 </html>
+
 
 
 
