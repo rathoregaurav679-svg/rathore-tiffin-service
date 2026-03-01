@@ -209,7 +209,7 @@ body{background:#fff;color:#333;}
   </div>
 </section>
 
-<!-- Modern Stats Section with Label Under Counter -->
+<!-- Modern Stats Section with Proper Black Labels -->
 <section class="stats-section" style="text-align:center; padding:50px 20px; background:#f8f8f8;">
   <div class="stats-container" style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
 
@@ -217,51 +217,24 @@ body{background:#fff;color:#333;}
     <div class="stat-card" style="flex:1; min-width:150px; background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
       <div style="font-size:40px;">👨‍🍳</div>
       <div style="font-size:32px; font-weight:bold; color:black;" class="counter" data-target="500">0</div>
-      <div style="font-size:20px; font-weight:bold; color:black;" class="counter-text">0</div>
-      <p style="margin:5px 0 0; font-size:18px;">Happy Customers</p>
+      <p style="margin:10px 0 0; font-size:18px; font-weight:bold; color:black;">Happy Customers</p>
     </div>
 
     <div class="stat-card" style="flex:1; min-width:150px; background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
       <div style="font-size:40px;">🍱</div>
       <div style="font-size:32px; font-weight:bold; color:black;" class="counter" data-target="1000">0</div>
-      <div style="font-size:20px; font-weight:bold; color:black;" class="counter-text">0</div>
-      <p style="margin:5px 0 0; font-size:18px;">Tiffins Delivered</p>
+      <p style="margin:10px 0 0; font-size:18px; font-weight:bold; color:black;">Tiffins Delivered</p>
     </div>
 
     <div class="stat-card" style="flex:1; min-width:150px; background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
       <div style="font-size:40px;">⭐</div>
       <div style="font-size:32px; font-weight:bold; color:black;" class="counter" data-target="4.9">0</div>
-      <div style="font-size:20px; font-weight:bold; color:black;" class="counter-text">0</div>
-      <p style="margin:5px 0 0; font-size:18px;">Rating</p>
+      <p style="margin:10px 0 0; font-size:18px; font-weight:bold; color:black;">Rating</p>
     </div>
 
   </div>
 </section>
 
-<!-- Counter Animation Script -->
-<script>
-const counters = document.querySelectorAll('.counter');
-counters.forEach((counter, index) => {
-  const counterText = counter.nextElementSibling; // Get the text below counter
-  const updateCount = () => {
-    const target = parseFloat(counter.getAttribute('data-target'));
-    const current = parseFloat(counter.innerText);
-    const increment = target / 100;
-
-    if(current < target){
-      const newValue = (current + increment).toFixed(target % 1 === 0 ? 0 : 1);
-      counter.innerText = newValue;
-      counterText.innerText = newValue; // Update text below
-      setTimeout(updateCount, 20);
-    } else {
-      counter.innerText = target;
-      counterText.innerText = target; // Final value
-    }
-  };
-  updateCount();
-});
-
-</script>
 <!-- Counter Animation Script -->
 <script>
 const counters = document.querySelectorAll('.counter');
@@ -279,6 +252,16 @@ counters.forEach(counter => {
     }
   };
   updateCount();
+});
+
+// Hover effect for cards
+document.querySelectorAll('.stat-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.style.transform = 'scale(1.05)';
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'scale(1)';
+  });
 });
 </script>
 
@@ -386,6 +369,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
