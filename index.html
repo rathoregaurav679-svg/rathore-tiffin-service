@@ -799,6 +799,23 @@ function sendMealDetails(){
 Chat on WhatsApp
 </a>
 
+<!-- ===== FIXED ANIMATED STATS SECTION END ===== -->  
+
+<script>
+function sendMealDetails(){
+  var plan = document.getElementById("plan").value;
+  var meal = document.getElementById("mealType").value;
+  var time = document.getElementById("mealTime").value;
+
+  var message = "Hello, I want to order:%0A";
+  message += "Plan: " + plan + "%0A";
+  message += "Meal: " + meal + "%0A";
+  message += "Time: " + time;
+
+  window.open("https://wa.me/917982774162?text=" + message, "_blank");
+}
+</script>  
+
 <footer>
   © 2026 Rathore Tiffin Service | +91 7982774162
 </footer>
@@ -816,6 +833,7 @@ function closePayment(){
 
 </body>
 </html>
+
 
 
 
