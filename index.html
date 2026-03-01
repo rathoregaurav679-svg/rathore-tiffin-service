@@ -192,16 +192,79 @@ footer{
   </div>
 </section>
 
-<!-- FRESH VEG MEALS -->
-<section class="gallery">
-  <h2>Our Fresh Veg Meals 🍛</h2>
-  <div class="gallery-container">
-    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950">
-    <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b">
-    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7">
-    <img src="https://images.unsplash.com/photo-1617692855027-33b14f061079">
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veg Tiffin Gallery</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.gallery-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.gallery-section h2 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="gallery-section">
+    <h2>Pure Veg Tiffin Gallery</h2>
+
+    <div class="gallery">
+        <img src="veg1.jpg" alt="Veg Tiffin 1">
+        <img src="veg2.jpg" alt="Veg Tiffin 2">
+        <img src="veg3.jpg" alt="Veg Tiffin 3">
+        <img src="veg4.jpg" alt="Veg Tiffin 4">
+    </div>
 </section>
+
+</body>
+</html>
 
 <!-- PLANS -->
 <section class="plans" id="plans">
@@ -323,3 +386,4 @@ function closePayment(){
 
 </body>
 </html>
+
