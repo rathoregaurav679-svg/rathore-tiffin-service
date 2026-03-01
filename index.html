@@ -493,34 +493,152 @@ slider.addEventListener("mousemove", (e) => {
   </form>
 </section>
 
-<!-- Highlighted Customer Reviews Section -->
+<!-- ===== CUSTOMER REVIEW SECTION START ===== -->
+
+<style>
+.reviews-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.review-heading {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #e65100;
+  font-weight: bold;
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Review Card */
+.review-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: 0.4s ease;
+}
+
+.review-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.4s ease;
+}
+
+/* Overlay */
+.review-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s ease;
+  border-radius: 20px;
+}
+
+.review-card:hover .review-overlay {
+  opacity: 1;
+}
+
+.review-card:hover img {
+  transform: scale(1.1);
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.review-overlay p {
+  font-size: 14px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.review-overlay h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .reviews-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .reviews-container {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
 <section class="reviews-section">
-  <div class="reviews-wrapper">
-    <h2 class="review-heading">⭐ What Our Happy Customers Say ⭐</h2>
+  <h2 class="review-heading">⭐ Our Happy Customers ⭐</h2>
 
-    <div class="reviews-container">
+  <div class="reviews-container">
 
-      <div class="review-card featured">
+    <div class="review-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Customer">
+      <div class="review-overlay">
         <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"Bilkul ghar jaisa khana milta hai. Delivery hamesha time pe hoti hai."</p>
-        <h4>- Amit Sharma</h4>
+        <p>Bilkul ghar jaisa khana. Taste amazing hai!</p>
+        <h4>Amit Sharma</h4>
       </div>
-
-      <div class="review-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"Affordable price me itna tasty aur hygienic khana milna mushkil hai."</p>
-        <h4>- Priya Verma</h4>
-      </div>
-
-      <div class="review-card">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>"Monthly subscription liya hai aur quality consistent hai. Highly recommended!"</p>
-        <h4>- Rahul Singh</h4>
-      </div>
-
     </div>
+
+    <div class="review-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Customer">
+      <div class="review-overlay">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>Delivery always on time. Very hygienic food.</p>
+        <h4>Priya Verma</h4>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Customer">
+      <div class="review-overlay">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>Monthly plan best hai. Highly recommended!</p>
+        <h4>Rahul Singh</h4>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Customer">
+      <div class="review-overlay">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>Affordable aur tasty food. Perfect service.</p>
+        <h4>Neha Gupta</h4>
+      </div>
+    </div>
+
   </div>
-</section>  
+</section>
+
+<!-- ===== CUSTOMER REVIEW SECTION END ===== -->  
 
 <script>
 function sendMealDetails(){
@@ -571,6 +689,7 @@ function closePayment(){
 
 </body>
 </html>
+
 
 
 
