@@ -209,14 +209,50 @@ body{background:#fff;color:#333;}
   </div>
 </section>
 
-<!-- ===== STATS ===== -->
-<section class="stats-section">
-  <div class="stats-container">
-    <div class="stat-box"><span class="stat-number" data-target="500" data-plus="+">0</span>👨‍🍳 Happy Customers</div>
-    <div class="stat-box"><span class="stat-number" data-target="1000" data-plus="+">0</span>🍱 Tiffins Delivered</div>
-    <div class="stat-box"><span class="stat-number" data-target="4.9">0</span>⭐ Rating</div>
+<!-- Stats Section -->
+<section class="stats-section" style="text-align:center; padding:50px 20px; background:#f8f8f8;">
+  <div class="stats-container" style="display:flex; justify-content:center; gap:50px; flex-wrap:wrap;">
+    
+    <div class="stat-card" style="flex:1; min-width:150px;">
+      <div style="font-size:40px;">👨‍🍳</div>
+      <div style="font-size:32px; font-weight:bold;" class="counter" data-target="500">0</div>
+      <p style="margin:5px 0 0; font-size:18px;">Happy Customers</p>
+    </div>
+
+    <div class="stat-card" style="flex:1; min-width:150px;">
+      <div style="font-size:40px;">🍱</div>
+      <div style="font-size:32px; font-weight:bold;" class="counter" data-target="1000">0</div>
+      <p style="margin:5px 0 0; font-size:18px;">Tiffins Delivered</p>
+    </div>
+
+    <div class="stat-card" style="flex:1; min-width:150px;">
+      <div style="font-size:40px;">⭐</div>
+      <div style="font-size:32px; font-weight:bold;" class="counter" data-target="4.9">0</div>
+      <p style="margin:5px 0 0; font-size:18px;">Rating</p>
+    </div>
+
   </div>
 </section>
+
+<!-- Counter Animation Script -->
+<script>
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = parseFloat(counter.getAttribute('data-target'));
+    const current = parseFloat(counter.innerText);
+    const increment = target / 100;
+
+    if(current < target){
+      counter.innerText = (current + increment).toFixed(target % 1 === 0 ? 0 : 1);
+      setTimeout(updateCount, 20);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  updateCount();
+});
+</script>
 
 <!-- ===== MAP SECTION ===== -->
 <section class="map" style="padding:100px 20px; text-align:center; background:#f7f7f7;">
@@ -322,5 +358,6 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
