@@ -1,213 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-<!DOCTYPE html>
-<html>
-<head>
-
-<title>Rathore Tiffin Service | Ghar Jaisa Khana in Netaji Subhash Place</title>
-
-<meta name="description" content="Rathore Tiffin Service provides hygienic and home style food in Netaji Subhash Place, Pitampura, Kohat Enclave & Rani Bagh. Monthly & Weekly Subscription Available.">
-
-<meta name="keywords" content="Tiffin Service in Netaji Subhash Place, Home Made Food in Pitampura, Monthly Tiffin Service Delhi">
-
-<meta name="author" content="Rathore Tiffin Service">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
-
-<body>
-
-<!-- Yaha se website ka content start hota hai -->
-
-</body>  
-</html>
-  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rathore Tiffin Service</title>
+<title>Rathore Tiffin Service | Ghar Jaisa Khana</title>
+<meta name="description" content="Rathore Tiffin Service provides hygienic and home style food in Netaji Subhash Place, Pitampura, Kohat Enclave & Rani Bagh. Monthly & Weekly Subscription Available.">
+<meta name="keywords" content="Tiffin Service in Netaji Subhash Place, Home Made Food in Pitampura, Monthly Tiffin Service Delhi">
+<meta name="author" content="Rathore Tiffin Service">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-  scroll-behavior:smooth;
-}
+/* ===== GENERAL ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#fff;color:#333;}
 
-body{
-  background:#fff;
-  color:#333;
+/* ===== NAVBAR ===== */
+.navbar{
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:#1a1a1a;
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 40px;
+  z-index:1000;
 }
+.navbar .logo{font-size:22px;font-weight:700;color:#ff9800;}
+.navbar .nav-links a{
+  color:#ccc;
+  margin-left:25px;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+.navbar .nav-links a:hover{color:#ff9800;}
 
 /* HERO */
 .hero{
   height:100vh;
   background:url("https://images.unsplash.com/photo-1546833999-b9f581a1996d") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-  color:#fff;
+  display:flex; align-items:center; justify-content:center; text-align:center; position:relative; color:#fff;
 }
-
 .hero::before{
   content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65));
+  position:absolute; inset:0;
+  background:linear-gradient(135deg, rgba(255,152,0,0.7), rgba(255,183,77,0.7));
 }
+.hero-content{position:relative; z-index:2; max-width:800px; padding:20px;}
+.hero h1{font-size:50px; font-weight:700; margin-bottom:15px;}
+.tagline{font-size:20px; margin-bottom:30px;}
+.btn{padding:14px 35px;border-radius:40px;font-weight:600;transition:0.3s;font-size:16px;border:none;cursor:pointer;background:linear-gradient(90deg,#ff9800,#ffb74d);color:#fff;}
+.btn:hover{background:#e68900; transform:translateY(-3px);}
 
-.hero-content{
-  position:relative;
-  z-index:2;
-  max-width:800px;
-  padding:20px;
-}
-
-.hero h1{
-  font-size:50px;
-  font-weight:700;
-  margin-bottom:15px;
-}
-
-.tagline{
-  font-size:20px;
-  margin-bottom:30px;
-}
-
-.btn{
-  padding:14px 35px;
-  border-radius:40px;
-  font-weight:600;
-  transition:0.3s;
-  font-size:16px;
-  border:none;
-  cursor:pointer;
-  background:#ff9800;
-  color:#fff;
-}
-
-.btn:hover{
-  background:#e68900;
-  transform:translateY(-3px);
-}
-
-/* GALLERY */
-.gallery{
-  padding:100px 20px;
-  text-align:center;
-}
-
-.gallery-container{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-  margin-top:40px;
-}
-
-.gallery img{
-  width:100%;
-  border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-  transition:0.4s;
-}
-
-.gallery img:hover{
-  transform:scale(1.08);
-}
-
-/* PLANS */
+/* ===== PLANS ===== */
 .plans{
-  padding:100px 20px;
-  text-align:center;
-  background:#fff3e0;
+  padding:100px 20px;text-align:center;background:#fff3e0;
 }
-
-.plan-container{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:30px;
-  margin-top:50px;
-}
-
+.plan-container{display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:50px;}
 .plan{
-  background:#fff;
-  padding:30px;
-  border-radius:20px;
-  width:300px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  transition:0.3s;
+  background:#fff; padding:30px; border-radius:20px; width:300px; box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  border:2px solid #ff9800; transition:0.3s;
 }
+.plan:hover{transform:translateY(-8px);}
 
-.plan:hover{
-  transform:translateY(-8px);
-}
+/* ===== GALLERY ===== */
+.veg-section{padding:80px 20px;text-align:center;background:#f9f9f9;}
+.veg-section h2{margin-bottom:40px;font-size:32px;font-weight:600;}
+.slider{display:flex;gap:25px;overflow-x:auto;cursor:grab;scroll-behavior:smooth;}
+.slider::-webkit-scrollbar{display:none;}
+.meal-card{flex:0 0 auto;width:300px;height:300px;}
+.meal-card img{width:300px;height:300px;object-fit:cover;border-radius:15px;box-shadow:0 8px 20px rgba(0,0,0,0.15);pointer-events:none;}
 
-/* PAYMENT POPUP */
-.payment-box{
-  display:none;
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.6);
-  justify-content:center;
-  align-items:center;
-}
+/* ===== REVIEWS ===== */
+.reviews-section { padding: 80px 20px; background: linear-gradient(135deg, #fff3e0, #ffe0b2); text-align: center; font-family: Arial, sans-serif;}
+.review-heading { font-size: 36px; margin-bottom: 50px; color: #e65100; font-weight: bold;}
+.reviews-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; max-width: 1200px; margin: auto;}
+.review-card { position: relative; height: 220px; background: white; border-radius: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); cursor: pointer; overflow: hidden; transition: 0.4s ease; display: flex; justify-content: center; align-items: center; font-size: 20px; font-weight: bold; color: #ff6f00;}
+.review-card span { transition: 0.3s ease;}
+.review-content { position: absolute; inset: 0; background: linear-gradient(135deg, #ff6f00, #ff9800); color: white; opacity: 0; padding: 20px; border-radius: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; transition: 0.4s ease; text-align: center;}
+.review-card:hover .review-content { opacity: 1;}
+.review-card:hover span { opacity: 0;}
+.stars { font-size: 20px; margin-bottom: 10px;}
+.review-content p { font-size: 14px; margin-bottom: 10px;}
+.review-content h4 { font-size: 16px; font-weight: 600;}
+@media (max-width: 992px){.reviews-container { grid-template-columns: repeat(2, 1fr);}}
+@media (max-width: 600px){.reviews-container { grid-template-columns: 1fr;}}
 
-.payment-content{
-  background:#fff;
-  padding:40px;
-  border-radius:20px;
-  text-align:center;
-  width:300px;
-}
+/* ===== STATS ===== */
+.stats-section { padding: 60px 20px; background: linear-gradient(135deg, #ff6f00, #ff9800); color: white; text-align: center; font-family: Arial, sans-serif;}
+.stats-container { display: flex; justify-content: center; align-items: center; gap: 80px; flex-wrap: wrap;}
+.stat-box { font-size: 22px; font-weight: bold;}
+.stat-number { font-size: 40px; display: block; margin-bottom: 10px;}
+@media (max-width: 768px) { .stats-container { gap: 40px;} }
 
-.map{
-  padding:100px 20px;
-  text-align:center;
-  background:#f7f7f7;
-}
+/* ===== FOOTER ===== */
+.footer { background: linear-gradient(135deg, #111, #1c1c1c); color: #fff; padding: 70px 40px 20px; margin-top: 60px;}
+.footer-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;}
+.footer h3 { margin-bottom: 20px; color: #ff9800; font-size: 18px; position: relative;}
+.footer h3::after { content: ""; width: 40px; height: 2px; background: #ff9800; position: absolute; left: 0; bottom: -8px;}
+.footer p, .footer a { color: #ccc; text-decoration: none; font-size: 14px; line-height: 1.8; transition: 0.3s;}
+.footer a:hover { color: #ff9800; padding-left: 5px;}
+.footer-links { padding:0;}
+.footer-links li { list-style: none; margin-bottom:10px;}
+.social-icons a { display: inline-block; margin-right:12px; font-size:18px; color:#fff; transition:0.3s;}
+.social-icons a:hover { color:#ff9800; transform: scale(1.3);}
+.footer-bottom { text-align: center; border-top:1px solid #333; margin-top:50px; padding-top:20px; font-size:14px; color:#aaa;}
+@media (max-width:900px){.footer-container { grid-template-columns: repeat(2,1fr);}}
+@media (max-width:600px){.footer-container { grid-template-columns:1fr;}}
 
-.map iframe{
-  width:100%;
-  max-width:900px;
-  height:400px;
-  border-radius:20px;
-  border:none;
-  box-shadow:0 10px 30px rgba(0,0,0,0.15);
-}
+/* ===== Floating WhatsApp ===== */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; font-size: 24px; padding: 15px; border-radius: 50%; text-align: center; box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:1000; transition:0.3s;}
+.whatsapp-float:hover { transform: scale(1.1); }
 
-footer{
-  background:#111;
-  color:#aaa;
-  text-align:center;
-  padding:20px;
-}
-
-.whatsapp-btn{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:#fff;
-  padding:15px 20px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:600;
-}
+/* ===== Back To Top ===== */
+#topBtn { position: fixed; bottom: 20px; left: 20px; background: #ff9800; color: white; border: none; padding: 12px 15px; border-radius: 50%; cursor: pointer; display: none; }
+#topBtn:hover { background: #e68900; }
 </style>
 </head>
-
 <body>
 
-<!-- HERO -->
+<!-- ===== NAVBAR ===== -->
+<div class="navbar">
+  <div class="logo">Rathore Tiffin 🍱</div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#plans">Plans</a>
+    <a href="#slider">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
 <section class="hero">
   <div class="hero-content">
     <h1>Rathore Tiffin Service 🍱</h1>
@@ -216,241 +144,10 @@ footer{
   </div>
 </section>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veg Tiffin Gallery</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-}
-
-.gallery-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.gallery-section h2 {
-    margin-bottom: 30px;
-    color: #333;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-    .gallery {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<!-- VEG DRAG SLIDER SECTION -->
-<section class="veg-section">
-  <h2>Pure Veg Tiffin Gallery</h2>
-
-  <div class="slider" id="slider">
-
-    <div class="meal-card">
-      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=500&auto=format&fit=crop">
-    </div>
-
-    <div class="meal-card">
-      <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=500&auto=format&fit=crop">
-    </div>
-
-    <div class="meal-card">
-      <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=500&auto=format&fit=crop">
-    </div>
-
-    <div class="meal-card">
-      <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=500&auto=format&fit=crop">
-    </div>
-
-    <div class="meal-card">
-      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=500&auto=format&fit=crop">
-    </div>
-
-  </div>
-</section>
-
-<style>
-.veg-section{
-  padding:80px 20px;
-  text-align:center;
-  background:#f9f9f9;
-}
-
-.slider{
-  display:flex;
-  gap:25px;
-  overflow-x:auto;
-  cursor:grab;
-  scroll-behavior:smooth;
-}
-
-.slider::-webkit-scrollbar{
-  display:none;
-}
-
-.meal-card{
-  flex:0 0 auto;
-  width:300px;
-  height:300px;
-}
-
-.meal-card img{
-  width:300px;
-  height:300px;
-  object-fit:cover;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
-  pointer-events:none;
-}
-</style>
-
-<script>
-const slider = document.getElementById("slider");
-
-let isDown = false;
-let startX;
-let scrollLeft;
-
-slider.addEventListener("mousedown", (e) => {
-  isDown = true;
-  slider.style.cursor = "grabbing";
-  startX = e.pageX - slider.offsetLeft;
-  scrollLeft = slider.scrollLeft;
-});
-
-slider.addEventListener("mouseleave", () => {
-  isDown = false;
-  slider.style.cursor = "grab";
-});
-
-slider.addEventListener("mouseup", () => {
-  isDown = false;
-  slider.style.cursor = "grab";
-});
-
-slider.addEventListener("mousemove", (e) => {
-  if(!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - slider.offsetLeft;
-  const walk = (x - startX) * 2;
-  slider.scrollLeft = scrollLeft - walk;
-});
-</script>
-
-<style>
-.veg-section{
-  padding:80px 20px;
-  text-align:center;
-  background:#f9f9f9;
-}
-
-.veg-section h2{
-  margin-bottom:40px;
-  font-size:30px;
-  font-weight:600;
-}
-
-.meal-container{
-  display:flex;
-  justify-content:center;
-  gap:25px;
-  flex-wrap:nowrap; /* ek hi line me */
-}
-
-.meal-card{
-  width:300px;
-  height:300px;
-  flex:0 0 auto;
-}
-
-.meal-card img{
-  width:300px;
-  height:300px;
-  object-fit:cover;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
-}
-</style>
-
-<style>
-.veg-section{
-  padding:80px 20px;
-  text-align:center;
-  background:#f9f9f9;
-}
-
-.veg-section h2{
-  margin-bottom:40px;
-  font-size:32px;
-  font-weight:600;
-}
-
-.meal-container{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:nowrap; /* ek hi line me rakhega */
-}
-
-.meal-card{
-  width:500px;
-  height:500px;
-  flex:0 0 auto;
-}
-
-.meal-card img{
-  width:500px;
-  height:500px;
-  object-fit:cover;
-  border-radius:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.15);
-}
-</style>
-
-</body>
-</html>
-
-<!-- PLANS -->
+<!-- ===== PLANS ===== -->
 <section class="plans" id="plans">
   <h2>Choose Your Tiffin Plan 🍱</h2>
   <div class="plan-container">
-
     <div class="plan">
       <h3>Basic Plan</h3>
       <h2>₹70</h2>
@@ -460,7 +157,6 @@ slider.addEventListener("mousemove", (e) => {
       <br>
       <button class="btn" onclick="openPayment('Basic - ₹70')">Select Plan</button>
     </div>
-
     <div class="plan">
       <h3>Standard Plan</h3>
       <h2>₹80</h2>
@@ -470,7 +166,6 @@ slider.addEventListener("mousemove", (e) => {
       <br>
       <button class="btn" onclick="openPayment('Standard - ₹80')">Select Plan</button>
     </div>
-
     <div class="plan">
       <h3>Premium Plan</h3>
       <h2>₹90</h2>
@@ -480,413 +175,62 @@ slider.addEventListener("mousemove", (e) => {
       <br>
       <button class="btn" onclick="openPayment('Premium - ₹90')">Select Plan</button>
     </div>
-
   </div>
 </section>
-  
-<!-- ===== CUSTOMER REVIEW SECTION START ===== -->
-<style>
-.reviews-section {
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
 
-.review-heading {
-  font-size: 36px;
-  margin-bottom: 50px;
-  color: #e65100;
-  font-weight: bold;
-}
+<!-- ===== VEG GALLERY ===== -->
+<section class="veg-section" id="slider">
+  <h2>Pure Veg Tiffin Gallery</h2>
+  <div class="slider">
+    <div class="meal-card"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=500&auto=format&fit=crop"></div>
+    <div class="meal-card"><img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=500&auto=format&fit=crop"></div>
+    <div class="meal-card"><img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=500&auto=format&fit=crop"></div>
+    <div class="meal-card"><img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=500&auto=format&fit=crop"></div>
+    <div class="meal-card"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=500&auto=format&fit=crop"></div>
+  </div>
+</section>
 
-.reviews-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Review Card */
-.review-card {
-  position: relative;
-  height: 220px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-  cursor: pointer;
-  overflow: hidden;
-  transition: 0.4s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-weight: bold;
-  color: #ff6f00;
-}
-
-/* Default Text */
-.review-card span {
-  transition: 0.3s ease;
-}
-
-/* Overlay Content */
-.review-content {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, #ff6f00, #ff9800);
-  color: white;
-  opacity: 0;
-  padding: 20px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s ease;
-  text-align: center;
-}
-
-.review-card:hover .review-content {
-  opacity: 1;
-}
-
-.review-card:hover span {
-  opacity: 0;
-}
-
-.stars {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.review-content p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.review-content h4 {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .reviews-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .reviews-container {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-
-<section class="reviews-section">
+<!-- ===== REVIEWS ===== -->
+<section class="reviews-section" id="reviews">
   <h2 class="review-heading">⭐ Our Happy Customers ⭐</h2>
-
   <div class="reviews-container">
-
-    <div class="review-card">
-      <span>Review 1</span>
-      <div class="review-content">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>Bilkul ghar jaisa khana. Taste amazing hai!</p>
-        <h4>Amit Sharma</h4>
-      </div>
+    <div class="review-card"><span>Review 1</span>
+      <div class="review-content"><div class="stars">⭐⭐⭐⭐⭐</div><p>Bilkul ghar jaisa khana. Taste amazing hai!</p><h4>Amit Sharma</h4></div>
     </div>
-
-    <div class="review-card">
-      <span>Review 2</span>
-      <div class="review-content">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>Delivery always on time. Very hygienic food.</p>
-        <h4>Priya Verma</h4>
-      </div>
+    <div class="review-card"><span>Review 2</span>
+      <div class="review-content"><div class="stars">⭐⭐⭐⭐⭐</div><p>Delivery always on time. Very hygienic food.</p><h4>Priya Verma</h4></div>
     </div>
-
-    <div class="review-card">
-      <span>Review 3</span>
-      <div class="review-content">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>Monthly plan best hai. Highly recommended!</p>
-        <h4>Rahul Singh</h4>
-      </div>
+    <div class="review-card"><span>Review 3</span>
+      <div class="review-content"><div class="stars">⭐⭐⭐⭐⭐</div><p>Monthly plan best hai. Highly recommended!</p><h4>Rahul Singh</h4></div>
     </div>
-
-    <div class="review-card">
-      <span>Review 4</span>
-      <div class="review-content">
-        <div class="stars">⭐⭐⭐⭐⭐</div>
-        <p>Affordable aur tasty food. Perfect service.</p>
-        <h4>Neha Gupta</h4>
-      </div>
+    <div class="review-card"><span>Review 4</span>
+      <div class="review-content"><div class="stars">⭐⭐⭐⭐⭐</div><p>Affordable aur tasty food. Perfect service.</p><h4>Neha Gupta</h4></div>
     </div>
-
   </div>
 </section>
 
-<!-- ===== CUSTOMER REVIEW SECTION END ===== -->
-<!-- ===== FIXED ANIMATED STATS SECTION START ===== -->
-
-<style>
-.stats-section {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #ff6f00, #ff9800);
-  color: white;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.stats-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  flex-wrap: wrap;
-}
-
-.stat-box {
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.stat-number {
-  font-size: 40px;
-  display: block;
-  margin-bottom: 10px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .stats-container {
-    gap: 40px;
-  }
-}
-</style>
-
+<!-- ===== STATS ===== -->
 <section class="stats-section">
   <div class="stats-container">
-
-    <div class="stat-box">
-      <span class="stat-number" data-target="500" data-plus="+">0</span>
-      👨‍🍳 Happy Customers
-    </div>
-
-    <div class="stat-box">
-      <span class="stat-number" data-target="10000" data-plus="+">0</span>
-      🍱 Tiffins Delivered
-    </div>
-
-    <div class="stat-box">
-      <span class="stat-number" data-target="4.9">0</span>
-      ⭐ Rating
-    </div>
-
+    <div class="stat-box"><span class="stat-number" data-target="500" data-plus="+">0</span>👨‍🍳 Happy Customers</div>
+    <div class="stat-box"><span class="stat-number" data-target="10000" data-plus="+">0</span>🍱 Tiffins Delivered</div>
+    <div class="stat-box"><span class="stat-number" data-target="4.9">0</span>⭐ Rating</div>
   </div>
 </section>
 
-<script>
-const counters = document.querySelectorAll('.stat-number');
-let started = false;
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a href="https://wa.me/917982774162" target="_blank" class="whatsapp-float">💬</a>
 
-function animateCounters() {
-  counters.forEach(counter => {
-    const target = parseFloat(counter.getAttribute('data-target'));
-    const hasPlus = counter.getAttribute('data-plus');
-    let count = 0;
+<!-- ===== BACK TO TOP ===== -->
+<button onclick="topFunction()" id="topBtn">↑</button>
 
-    const increment = target / 100;
-
-    const updateCount = () => {
-      count += increment;
-
-      if (count < target) {
-        counter.innerText = target % 1 !== 0 
-          ? count.toFixed(1) 
-          : Math.floor(count);
-        requestAnimationFrame(updateCount);
-      } else {
-        counter.innerText = target + (hasPlus ? hasPlus : '');
-      }
-    };
-
-    updateCount();
-  });
-}
-
-window.addEventListener('scroll', () => {
-  const section = document.querySelector('.stats-section');
-  const position = section.getBoundingClientRect().top;
-  const screenHeight = window.innerHeight;
-
-  if (position < screenHeight && !started) {
-    animateCounters();
-    started = true;
-  }
-});
-</script>
-
-<!-- PAYMENT POPUP -->
-<div class="payment-box" id="paymentBox">
-  <div class="payment-content">
-    <h3>Pay via UPI</h3>
-    <p id="selectedPlan"></p>
-    <p><b>UPI ID:</b> 9899391051@ptaxis</p>
-    <br>
-    <button class="btn" onclick="closePayment()">Close</button>
-  </div>
-</div>
-
-<!-- MAP --> <section class="map"> <h2>Find Us Here 📍</h2> <iframe src="https://www.google.com/maps?q=Rathore+Tiffin+Service+Netaji+Subhash+Place&output=embed" loading="lazy"> </iframe> <br><br> <a href="https://www.google.com/search?q=rathore+tiffin+service" target="_blank" class="btn"> 🔍 View on Google </a> </section>
-<a href="https://wa.me/917982774162" class="whatsapp-btn" target="_blank">
-Chat on WhatsApp
-</a>
-  <!-- MEAL BOOKING SECTION -->
-<section style="padding:100px 20px; background:#f7f7f7; text-align:center;">
-  <h2>When Do You Want Your Meal? 🍱</h2>
-
-  <form onsubmit="sendMealDetails(); return false;" 
-        style="max-width:500px; margin:auto; margin-top:40px; display:flex; flex-direction:column; gap:20px;">
-
-    <!-- Plan Selection -->
-    <select id="plan" required 
-      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
-      <option value="">Select Plan</option>
-      <option value="Basic Plan - ₹70">Basic Plan - ₹70</option>
-      <option value="Standard Plan - ₹80">Standard Plan - ₹80</option>
-      <option value="Premium Plan - ₹90">Premium Plan - ₹90</option>
-    </select>
-
-    <!-- Meal Type -->
-    <select id="mealType" required 
-      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
-      <option value="">Select Meal Type</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Dinner">Dinner</option>
-    </select>    
-
-    <!-- Time -->
-    <input type="time" id="mealTime" required 
-      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
-
-    <button type="submit" class="btn">Confirm Order</button>
-
-  </form>
-</section>
-
-<!-- ===== CUSTOMER REVIEW SECTION START ===== -->  
-
-<!-- ===== FOOTER CSS (Isko <style> ke andar daalo) ===== -->
-<style>
-/* ===== PROFESSIONAL FOOTER ===== */
-.footer {
-  background: linear-gradient(135deg, #111, #1c1c1c);
-  color: #fff;
-  padding: 70px 40px 20px;
-  margin-top: 60px;
-}
-
-.footer-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-
-.footer h3 {
-  margin-bottom: 20px;
-  color: #ff9800;
-  font-size: 18px;
-  position: relative;
-}
-
-.footer h3::after {
-  content: "";
-  width: 40px;
-  height: 2px;
-  background: #ff9800;
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-}
-
-.footer p,
-.footer a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 14px;
-  line-height: 1.8;
-  transition: 0.3s;
-}
-
-.footer a:hover {
-  color: #ff9800;
-  padding-left: 5px;
-}
-
-.footer-links {
-  padding: 0;
-}
-
-.footer-links li {
-  list-style: none;
-  margin-bottom: 10px;
-}
-
-.social-icons a {
-  display: inline-block;
-  margin-right: 12px;
-  font-size: 18px;
-  color: #fff;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: #ff9800;
-  transform: scale(1.3);
-}
-
-.footer-bottom {
-  text-align: center;
-  border-top: 1px solid #333;
-  margin-top: 50px;
-  padding-top: 20px;
-  font-size: 14px;
-  color: #aaa;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-container {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
-
-<!-- ===== FINAL FOOTER HTML (Isko </body> se just upar daalo) ===== -->
+<!-- ===== FOOTER ===== -->
 <footer class="footer" id="contact">
   <div class="footer-container">
-
-    <!-- About -->
     <div>
       <h3>Rathore Tiffin Service</h3>
-      <p>
-        Ghar jaisa hygienic aur fresh khana.
-        Daily lunch & dinner tiffin delivery.
-        Monthly & Weekly subscriptions available.
-      </p>
+      <p>Ghar jaisa hygienic aur fresh khana. Daily lunch & dinner tiffin delivery. Monthly & Weekly subscriptions available.</p>
     </div>
-
-    <!-- Quick Links -->
     <div>
       <h3>Quick Links</h3>
       <ul class="footer-links">
@@ -896,22 +240,15 @@ Chat on WhatsApp
         <li><a href="#reviews">Reviews</a></li>
       </ul>
     </div>
-
-    <!-- Contact Info -->
     <div>
       <h3>Contact Us</h3>
       <p>📍 Netaji Subhash Place, Delhi</p>
       <p>📞 7982774162</p>
-
+      <p>📧 rathoretiffin@gmail.com</p>
       <div class="social-icons">
-        <a href="#">📘</a>
-        <a href="#">📸</a>
-        <a href="#">💬</a>
-        <a href="#">🌐</a>
+        <a href="#">📘</a><a href="#">📸</a><a href="#">💬</a><a href="#">🌐</a>
       </div>
     </div>
-
-    <!-- Working Hours -->
     <div>
       <h3>Working Hours</h3>
       <p>Monday - Saturday</p>
@@ -919,29 +256,20 @@ Chat on WhatsApp
       <p>Dinner: 7:00 PM - 10:00 PM</p>
       <p>Sunday: Closed</p>
     </div>
-
   </div>
-
-  <div class="footer-bottom">
-    © 2026 Rathore Tiffin Service | All Rights Reserved
-  </div>
+  <div class="footer-bottom">© 2026 Rathore Tiffin Service | All Rights Reserved</div>
 </footer>
 
 <script>
-function openPayment(plan){
-  document.getElementById("paymentBox").style.display="flex";
-  document.getElementById("selectedPlan").innerText="Selected: "+plan;
-}
+// ===== Stats Animation =====
+const counters=document.querySelectorAll('.stat-number');let started=false;
+function animateCounters(){counters.forEach(counter=>{const target=parseFloat(counter.getAttribute('data-target'));const hasPlus=counter.getAttribute('data-plus');let count=0;const increment=target/100;const updateCount=()=>{count+=increment;if(count<target){counter.innerText=target%1!==0?count.toFixed(1):Math.floor(count);}else{counter.innerText=target+(hasPlus?hasPlus:'');}};updateCount();});}
+window.addEventListener('scroll',()=>{const section=document.querySelector('.stats-section');const position=section.getBoundingClientRect().top;const screenHeight=window.innerHeight;if(position<screenHeight&&!started){animateCounters();started=true;}});
 
-function closePayment(){
-  document.getElementById("paymentBox").style.display="none";
-}
-</script>
+// ===== Back To Top =====
+window.onscroll=function(){document.getElementById("topBtn").style.display=document.documentElement.scrollTop>200?"block":"none";};
+function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 
-</body>
-</html>
-
-
-
-
-
+// ===== Payment Popup =====
+function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
+function
