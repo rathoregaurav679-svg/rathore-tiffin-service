@@ -252,30 +252,102 @@ body {
 
 <body>
 
-<!-- VEG GALLERY SECTION -->
+<!-- VEG DRAG SLIDER SECTION -->
 <section class="veg-section">
   <h2>Pure Veg Tiffin Gallery</h2>
 
-  <div class="meal-container">
+  <div class="slider" id="slider">
 
     <div class="meal-card">
-      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=500&auto=format&fit=crop" alt="Veg Tiffin 1">
+      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=500&auto=format&fit=crop">
     </div>
 
     <div class="meal-card">
-      <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=500&auto=format&fit=crop" alt="Veg Tiffin 2">
+      <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?q=80&w=500&auto=format&fit=crop">
     </div>
 
     <div class="meal-card">
-      <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=500&auto=format&fit=crop" alt="Veg Tiffin 3">
+      <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?q=80&w=500&auto=format&fit=crop">
     </div>
 
     <div class="meal-card">
-      <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=500&auto=format&fit=crop" alt="Veg Tiffin 4">
+      <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=500&auto=format&fit=crop">
+    </div>
+
+    <div class="meal-card">
+      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=500&auto=format&fit=crop">
     </div>
 
   </div>
 </section>
+
+<style>
+.veg-section{
+  padding:80px 20px;
+  text-align:center;
+  background:#f9f9f9;
+}
+
+.slider{
+  display:flex;
+  gap:25px;
+  overflow-x:auto;
+  cursor:grab;
+  scroll-behavior:smooth;
+}
+
+.slider::-webkit-scrollbar{
+  display:none;
+}
+
+.meal-card{
+  flex:0 0 auto;
+  width:300px;
+  height:300px;
+}
+
+.meal-card img{
+  width:300px;
+  height:300px;
+  object-fit:cover;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  pointer-events:none;
+}
+</style>
+
+<script>
+const slider = document.getElementById("slider");
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.style.cursor = "grabbing";
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.style.cursor = "grab";
+});
+
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.style.cursor = "grab";
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if(!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+});
+</script>
 
 <style>
 .veg-section{
@@ -470,6 +542,7 @@ function closePayment(){
 
 </body>
 </html>
+
 
 
 
