@@ -665,7 +665,7 @@ slider.addEventListener("mousemove", (e) => {
 
 <!-- ===== CUSTOMER REVIEW SECTION END ===== -->
 
-<!-- ===== ANIMATED STATS SECTION START ===== -->
+<!-- ===== FIXED ANIMATED STATS SECTION START ===== -->
 
 <style>
 .stats-section {
@@ -707,17 +707,17 @@ slider.addEventListener("mousemove", (e) => {
   <div class="stats-container">
 
     <div class="stat-box">
-      <span class="stat-number" data-target="500">0</span>
+      <span class="stat-number" data-target="500" data-plus="+">0</span>
       👨‍🍳 Happy Customers
     </div>
 
     <div class="stat-box">
-      <span class="stat-number" data-target="1000">0</span>
+      <span class="stat-number" data-target="10000" data-plus="+">0</span>
       🍱 Tiffins Delivered
     </div>
 
     <div class="stat-box">
-      <span class="stat-number" data-target="4.8">0</span>
+      <span class="stat-number" data-target="4.9">0</span>
       ⭐ Rating
     </div>
 
@@ -726,40 +726,46 @@ slider.addEventListener("mousemove", (e) => {
 
 <script>
 const counters = document.querySelectorAll('.stat-number');
-const speed = 200;
+let started = false;
 
-const animateCounters = () => {
+function animateCounters() {
   counters.forEach(counter => {
+    const target = parseFloat(counter.getAttribute('data-target'));
+    const hasPlus = counter.getAttribute('data-plus');
+    let count = 0;
+
+    const increment = target / 100;
+
     const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
-      const increment = target / speed;
+      count += increment;
 
       if (count < target) {
-        counter.innerText = (count + increment).toFixed(target % 1 !== 0 ? 1 : 0);
-        setTimeout(updateCount, 10);
+        counter.innerText = target % 1 !== 0 
+          ? count.toFixed(1) 
+          : Math.floor(count);
+        requestAnimationFrame(updateCount);
       } else {
-        counter.innerText = target + (target >= 1000 ? '+' : '+');
+        counter.innerText = target + (hasPlus ? hasPlus : '');
       }
     };
+
     updateCount();
   });
-};
+}
 
-let started = false;
 window.addEventListener('scroll', () => {
   const section = document.querySelector('.stats-section');
-  const sectionTop = section.getBoundingClientRect().top;
+  const position = section.getBoundingClientRect().top;
   const screenHeight = window.innerHeight;
 
-  if (sectionTop < screenHeight && !started) {
+  if (position < screenHeight && !started) {
     animateCounters();
     started = true;
   }
 });
 </script>
 
-<!-- ===== ANIMATED STATS SECTION END ===== -->  
+<!-- ===== FIXED ANIMATED STATS SECTION END ===== -->  
 
 <script>
 function sendMealDetails(){
@@ -810,6 +816,7 @@ function closePayment(){
 
 </body>
 </html>
+
 
 
 
