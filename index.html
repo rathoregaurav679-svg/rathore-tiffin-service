@@ -440,25 +440,25 @@ document.addEventListener("DOMContentLoaded", function() {
       <!-- Meal Type -->
       <div style="flex:1; min-width:200px;">
         <label style="font-weight:600;">🍱 Select Meal</label>
-        <select style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
-          <option>Lunch</option>
-          <option>Dinner</option>
+        <select id="mealType" style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
+          <option value="Lunch">Lunch</option>
+          <option value="Dinner">Dinner</option>
         </select>
       </div>
 
       <!-- Meal Time -->
       <div style="flex:1; min-width:200px;">
         <label style="font-weight:600;">⏰ Select Time</label>
-        <input type="time" style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
+        <input type="time" id="mealTime" style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
       </div>
 
       <!-- Plan Type -->
       <div style="flex:1; min-width:200px;">
         <label style="font-weight:600;">💎 Select Plan</label>
-        <select style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
-          <option>Basic Plan</option>
-          <option>Standard Plan</option>
-          <option>Premium Plan</option>
+        <select id="mealPlan" style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
+          <option value="Basic Plan">Basic Plan</option>
+          <option value="Standard Plan">Standard Plan</option>
+          <option value="Premium Plan">Premium Plan</option>
         </select>
       </div>
 
@@ -466,8 +466,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     <!-- Button -->
     <div style="text-align:center; margin-top:40px;">
-      <button style="
-        background:#ff6b35;
+      <button onclick="sendToWhatsApp()" style="
+        background:#25D366;
         color:white;
         padding:14px 40px;
         border:none;
@@ -477,15 +477,32 @@ document.addEventListener("DOMContentLoaded", function() {
         cursor:pointer;
         transition:0.3s;
       "
-      onmouseover="this.style.background='#e85a28'"
-      onmouseout="this.style.background='#ff6b35'">
-        Subscribe Now
+      onmouseover="this.style.background='#1ebe5d'"
+      onmouseout="this.style.background='#25D366'">
+        Book Your Meal
       </button>
     </div>
 
   </div>
 
-</section> 
+</section>
+
+<script>
+function sendToWhatsApp() {
+  var meal = document.getElementById("mealType").value;
+  var time = document.getElementById("mealTime").value;
+  var plan = document.getElementById("mealPlan").value;
+
+  var phoneNumber = "917982774162"; // 👈 Apna WhatsApp number yahan change kar sakte ho (91 + number)
+
+  var message = "Hello Rathore Tiffin Service,%0A%0AI would like to book a meal:%0A%0A🍱 Meal Type: " 
+  + meal + "%0A⏰ Time: " + time + "%0A💎 Plan: " + plan;
+
+  var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + message;
+
+  window.open(whatsappURL, "_blank");
+}
+</script> 
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer" id="contact">
@@ -536,6 +553,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
