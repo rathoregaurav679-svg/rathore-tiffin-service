@@ -209,59 +209,59 @@ body{background:#fff;color:#333;}
   </div>
 </section>
 
-<!-- Modern Stats Section with Proper Black Labels -->
-<section class="stats-section" style="text-align:center; padding:50px 20px; background:#f8f8f8;">
-  <div class="stats-container" style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+<!-- Modern Stats Section -->
+<section class="stats-section" style="text-align:center; padding:60px 20px; background:#f8f8f8;">
+  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
 
-    <!-- Stat Card -->
-    <div class="stat-card" style="flex:1; min-width:150px; background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+    <!-- Card 1 -->
+    <div class="stat-card" style="background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); min-width:200px; transition:0.3s;">
       <div style="font-size:40px;">👨‍🍳</div>
-      <div style="font-size:32px; font-weight:bold; color:black;" class="counter" data-target="500">0</div>
-      <p style="margin:10px 0 0; font-size:18px; font-weight:bold; color:black;">Happy Customers</p>
+      <div class="counter" data-target="500" style="font-size:35px; font-weight:bold; color:black;">0</div>
+      <p style="font-size:18px; font-weight:bold; color:black; margin-top:10px;">Happy Customers</p>
     </div>
 
-    <div class="stat-card" style="flex:1; min-width:150px; background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+    <!-- Card 2 -->
+    <div class="stat-card" style="background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); min-width:200px; transition:0.3s;">
       <div style="font-size:40px;">🍱</div>
-      <div style="font-size:32px; font-weight:bold; color:black;" class="counter" data-target="1000">0</div>
-      <p style="margin:10px 0 0; font-size:18px; font-weight:bold; color:black;">Tiffins Delivered</p>
+      <div class="counter" data-target="1000" style="font-size:35px; font-weight:bold; color:black;">0</div>
+      <p style="font-size:18px; font-weight:bold; color:black; margin-top:10px;">Tiffins Delivered</p>
     </div>
 
-    <div class="stat-card" style="flex:1; min-width:150px; background:white; padding:20px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s;">
+    <!-- Card 3 -->
+    <div class="stat-card" style="background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); min-width:200px; transition:0.3s;">
       <div style="font-size:40px;">⭐</div>
-      <div style="font-size:32px; font-weight:bold; color:black;" class="counter" data-target="4.9">0</div>
-      <p style="margin:10px 0 0; font-size:18px; font-weight:bold; color:black;">Rating</p>
+      <div class="counter" data-target="4.9" style="font-size:35px; font-weight:bold; color:black;">0</div>
+      <p style="font-size:18px; font-weight:bold; color:black; margin-top:10px;">Rating</p>
     </div>
 
   </div>
 </section>
 
-<!-- Counter Animation Script -->
 <script>
-const counters = document.querySelectorAll('.counter');
-counters.forEach(counter => {
-  const updateCount = () => {
-    const target = parseFloat(counter.getAttribute('data-target'));
-    const current = parseFloat(counter.innerText);
-    const increment = target / 100;
+document.addEventListener("DOMContentLoaded", function() {
 
-    if(current < target){
-      counter.innerText = (current + increment).toFixed(target % 1 === 0 ? 0 : 1);
-      setTimeout(updateCount, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
-  updateCount();
-});
+  const counters = document.querySelectorAll(".counter");
 
-// Hover effect for cards
-document.querySelectorAll('.stat-card').forEach(card => {
-  card.addEventListener('mouseenter', () => {
-    card.style.transform = 'scale(1.05)';
+  counters.forEach(counter => {
+    const target = parseFloat(counter.getAttribute("data-target"));
+    const isDecimal = target % 1 !== 0;
+    let count = 0;
+
+    const speed = target / 100;
+
+    const updateCounter = () => {
+      if (count < target) {
+        count += speed;
+        counter.innerText = isDecimal ? count.toFixed(1) : Math.floor(count);
+        setTimeout(updateCounter, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCounter();
   });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'scale(1)';
-  });
+
 });
 </script>
 
@@ -369,6 +369,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
