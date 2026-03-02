@@ -286,24 +286,31 @@ body{background:#fff;color:#333;}
 </section>
 
 <!-- Modern Stats Section -->
-<section class="stats-section">
-    <div class="stat-box">
-        <div class="icon">😊</div>
-        <h2 class="counter" data-target="500">0</h2>
-        <p>Happy Customers</p>
+<section class="stats-section" style="text-align:center; padding:60px 20px; background:#f8f8f8;">
+  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+
+    <!-- Card 1 -->
+    <div class="stat-card" style="background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); min-width:200px; transition:0.3s;">
+      <div style="font-size:40px;">👨‍🍳</div>
+      <div class="counter" data-target="500" style="font-size:35px; font-weight:bold; color:black;">0</div>
+      <p style="font-size:18px; font-weight:bold; color:black; margin-top:10px;">Happy Customers</p>
     </div>
 
-    <div class="stat-box">
-        <div class="icon">🍱</div>
-        <h2 class="counter" data-target="1200">0</h2>
-        <p>Tiffins Delivered</p>
+    <!-- Card 2 -->
+    <div class="stat-card" style="background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); min-width:200px; transition:0.3s;">
+      <div style="font-size:40px;">🍱</div>
+      <div class="counter" data-target="1000" style="font-size:35px; font-weight:bold; color:black;">0</div>
+      <p style="font-size:18px; font-weight:bold; color:black; margin-top:10px;">Tiffins Delivered</p>
     </div>
 
-    <div class="stat-box">
-        <div class="icon">⭐</div>
-        <h2 class="counter" data-target="5">0</h2>
-        <p>Rating</p>
+    <!-- Card 3 -->
+    <div class="stat-card" style="background:white; padding:25px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); min-width:200px; transition:0.3s;">
+      <div style="font-size:40px;">⭐</div>
+      <div class="counter" data-target="4.9" style="font-size:35px; font-weight:bold; color:black;">0</div>
+      <p style="font-size:18px; font-weight:bold; color:black; margin-top:10px;">Rating</p>
     </div>
+
+  </div>
 </section>
 
 <!-- TRUST + MAP SECTION START -->
@@ -553,6 +560,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
