@@ -540,6 +540,39 @@ function sendToWhatsApp() {
   <div class="footer-bottom">© 2026 Rathore Tiffin Service | All Rights Reserved</div>
 </footer>
 
+<!-- WhatsApp Chat Box Start -->
+<div class="whatsapp-chat">
+    
+    <div class="chat-popup" id="chatBox">
+        <div class="chat-header">
+            Rathore Tiffin Service
+            <span onclick="closeChat()">✖</span>
+        </div>
+        <div class="chat-body">
+            <p>👋 Hi! Aaj ka menu dekhna hai?</p>
+            <a href="https://wa.me/917982774162" target="_blank" class="chat-btn">
+                Chat with us now
+            </a>
+        </div>
+    </div>
+
+    <div class="whatsapp-icon" onclick="openChat()">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </div>
+
+</div>
+
+<script>
+function openChat() {
+    document.getElementById("chatBox").style.display = "block";
+}
+
+function closeChat() {
+    document.getElementById("chatBox").style.display = "none";
+}
+</script>
+<!-- WhatsApp Chat Box End -->    
+
 <script>
 // ===== Stats Animation =====
 const counters=document.querySelectorAll('.stat-number');let started=false;
@@ -553,3 +586,4 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
