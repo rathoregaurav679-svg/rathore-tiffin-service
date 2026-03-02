@@ -422,38 +422,70 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- ===== BACK TO TOP ===== -->
 <button onclick="topFunction()" id="topBtn">↑</button>
 
- <!-- MEAL BOOKING SECTION -->
-<section style="padding:100px 20px; background:#f7f7f7; text-align:center;">
-  <h2>When Do You Want Your Meal? 🍱</h2>
+<!-- Meal Selection Section -->
+<section style="padding:70px 20px; background:linear-gradient(135deg,#fff5f0,#ffe8d6);">
 
-  <form onsubmit="sendMealDetails(); return false;" 
-        style="max-width:500px; margin:auto; margin-top:40px; display:flex; flex-direction:column; gap:20px;">
+  <div style="max-width:1000px; margin:0 auto; background:#ffffff; padding:40px; border-radius:20px; box-shadow:0 15px 35px rgba(0,0,0,0.08);">
 
-    <!-- Plan Selection -->
-    <select id="plan" required 
-      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
-      <option value="">Select Plan</option>
-      <option value="Basic Plan - ₹70">Basic Plan - ₹70</option>
-      <option value="Standard Plan - ₹80">Standard Plan - ₹80</option>
-      <option value="Premium Plan - ₹90">Premium Plan - ₹90</option>
-    </select>
+    <h2 style="text-align:center; font-size:28px; margin-bottom:10px; font-weight:700;">
+      Choose Your Meal Plan
+    </h2>
 
-    <!-- Meal Type -->
-    <select id="mealType" required 
-      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
-      <option value="">Select Meal Type</option>
-      <option value="Lunch">Lunch</option>
-      <option value="Dinner">Dinner</option>
-    </select>    
+    <p style="text-align:center; color:#666; margin-bottom:40px;">
+      Select your preferred meal type, delivery time, and subscription plan.
+    </p>
 
-    <!-- Time -->
-    <input type="time" id="mealTime" required 
-      style="padding:15px; border-radius:10px; border:1px solid #ddd; font-size:16px;">
+    <div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:space-between;">
 
-    <button type="submit" class="btn">Confirm Order</button>
+      <!-- Meal Type -->
+      <div style="flex:1; min-width:200px;">
+        <label style="font-weight:600;">🍱 Select Meal</label>
+        <select style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
+          <option>Lunch</option>
+          <option>Dinner</option>
+        </select>
+      </div>
 
-  </form>
-</section>  
+      <!-- Meal Time -->
+      <div style="flex:1; min-width:200px;">
+        <label style="font-weight:600;">⏰ Select Time</label>
+        <input type="time" style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
+      </div>
+
+      <!-- Plan Type -->
+      <div style="flex:1; min-width:200px;">
+        <label style="font-weight:600;">💎 Select Plan</label>
+        <select style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
+          <option>Basic Plan</option>
+          <option>Standard Plan</option>
+          <option>Premium Plan</option>
+        </select>
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <div style="text-align:center; margin-top:40px;">
+      <button style="
+        background:#ff6b35;
+        color:white;
+        padding:14px 40px;
+        border:none;
+        border-radius:30px;
+        font-size:16px;
+        font-weight:600;
+        cursor:pointer;
+        transition:0.3s;
+      "
+      onmouseover="this.style.background='#e85a28'"
+      onmouseout="this.style.background='#ff6b35'">
+        Subscribe Now
+      </button>
+    </div>
+
+  </div>
+
+</section> 
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer" id="contact">
@@ -504,6 +536,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
