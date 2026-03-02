@@ -313,7 +313,7 @@ body{background:#fff;color:#333;}
   </div>
 </section>
 
-<!-- ===== TRUST + ADDRESS SECTION ===== -->
+<!-- ===== TRUST + ADDRESS + MAP SECTION ===== -->
 <section style="padding:80px 20px; background:linear-gradient(135deg,#fff5f0,#ffe8d6);">
 
   <div style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; gap:60px; align-items:flex-start;">
@@ -345,7 +345,7 @@ body{background:#fff;color:#333;}
 
     </div>
 
-    <!-- RIGHT SIDE - ADDRESS + RATING -->
+    <!-- RIGHT SIDE - ADDRESS BOX -->
     <div style="flex:1; min-width:320px; background:#fff; padding:40px; border-radius:20px; box-shadow:0 15px 35px rgba(0,0,0,0.1);">
 
       <h2 style="font-size:26px; font-weight:700; margin-bottom:20px; color:#e65100;">
@@ -367,6 +367,7 @@ body{background:#fff;color:#333;}
         <span style="font-size:16px; color:#555;">5.0 Google Rating</span>
       </div>
 
+      <!-- GET DIRECTIONS BUTTON -->
       <a href="https://www.google.com/maps/dir/?api=1&destination=No+19+B08+Shop+Netaji+Subhash+Place+Pitampura+New+Delhi+Delhi+110034"
          target="_blank"
          style="display:inline-block;
@@ -382,6 +383,18 @@ body{background:#fff;color:#333;}
 
     </div>
 
+  </div>
+
+  <!-- GOOGLE MAP PINNED LOCATION -->
+  <div style="max-width:1200px; margin:60px auto 0;">
+    <iframe 
+      src="https://www.google.com/maps?q=No+19+B08+Shop+Netaji+Subhash+Place+Pitampura+New+Delhi+Delhi+110034&output=embed"
+      width="100%" 
+      height="450"
+      style="border:0; border-radius:20px; box-shadow:0 15px 35px rgba(0,0,0,0.15);" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
   </div>
 
 </section>
@@ -568,6 +581,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
