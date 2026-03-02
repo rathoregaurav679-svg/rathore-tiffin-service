@@ -139,7 +139,63 @@ body{background:#fff;color:#333;}
 /* ===== Back To Top ===== */
 #topBtn { position: fixed; bottom: 20px; left: 20px; background: #ff9800; color: white; border: none; padding: 12px 15px; border-radius: 50%; cursor: pointer; display: none; }
 #topBtn:hover { background: #e68900; }
-</style>
+  /* ===== SERVICE AREA ===== */
+.service-area {
+  padding: 80px 20px;
+  background: linear-gradient(135deg,#fff3e0,#ffe0b2);
+  text-align: center;
+}
+
+.service-area h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #e65100;
+  font-weight: 700;
+}
+
+.service-area p {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  color: #555;
+  line-height: 1.6;
+}
+
+.area-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.area-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.area-card:hover {
+  background: #ff9800;
+  color: #fff;
+  transform: translateY(-8px);
+}
+
+@media(max-width: 992px){
+  .area-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width: 600px){
+  .area-grid {
+    grid-template-columns: 1fr;
+  }
+}   
+</style>   
 </head>
 <body>
 
@@ -441,6 +497,23 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+ <!-- ===== SERVICE AREA SECTION ===== -->
+<section class="service-area">
+  <h2>Our Service Areas 📍</h2>
+
+  <p>
+    Rathore Tiffin Service provides fresh & hygienic veg tiffin delivery in 
+    Netaji Subhash Place, Pitampura, Kohat Enclave and Rohini with free home delivery.
+  </p>
+
+  <div class="area-grid">
+    <div class="area-card">📍 Netaji Subhash Place</div>
+    <div class="area-card">📍 Pitampura</div>
+    <div class="area-card">📍 Kohat Enclave</div>
+    <div class="area-card">📍 Rohini</div>
+  </div>
+</section>     
+
 <!-- ===== MAP SECTION ===== -->
 <section class="map" style="padding:100px 20px; text-align:center; background:#f7f7f7;">
   <h2>Find Us Here 📍</h2>
@@ -594,6 +667,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
