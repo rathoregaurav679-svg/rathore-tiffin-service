@@ -237,6 +237,89 @@ body{background:#fff;color:#333;}
   </div>
 </section>
 
+ <!-- Premium Stats Section -->
+<section style="padding:70px 20px; background:linear-gradient(135deg,#fff5f0,#ffe8d6); text-align:center;">
+
+  <!-- Heading -->
+  <h2 style="
+      font-size:32px;
+      font-weight:700;
+      background: linear-gradient(45deg,#ff6b35,#ff8c42);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom:15px;
+  ">
+    Why Customers Trust Rathore Tiffin Service
+  </h2>
+
+  <div style="width:80px; height:4px; background:#ff6b35; margin:0 auto 50px auto; border-radius:10px;"></div>
+
+  <!-- Stats Container -->
+  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap;">
+
+    <!-- Card 1 -->
+    <div class="stat-card" style="background:white; padding:30px; border-radius:18px; box-shadow:0 10px 25px rgba(0,0,0,0.08); min-width:220px; transition:0.3s;">
+      <div style="font-size:45px;">👨‍🍳</div>
+      <div class="counter" data-target="500" style="font-size:38px; font-weight:bold; color:black;">0</div>
+      <p style="font-size:18px; font-weight:bold; color:black; margin-top:10px;">Happy Customers</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="stat-card" style="background:white; padding:30px; border-radius:18px; box-shadow:0 10px 25px rgba(0,0,0,0.08); min-width:220px; transition:0.3s;">
+      <div style="font-size:45px;">🍱</div>
+      <div class="counter" data-target="1000" style="font-size:38px; font-weight:bold; color:black;">0</div>
+      <p style="font-size:18px; font-weight:bold; color:black; margin-top:10px;">Tiffins Delivered</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="stat-card" style="background:white; padding:30px; border-radius:18px; box-shadow:0 10px 25px rgba(0,0,0,0.08); min-width:220px; transition:0.3s;">
+      <div style="font-size:45px;">⭐</div>
+      <div class="counter" data-target="4.9" style="font-size:38px; font-weight:bold; color:black;">0</div>
+      <p style="font-size:18px; font-weight:bold; color:black; margin-top:10px;">Rating</p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach(counter => {
+    const target = parseFloat(counter.getAttribute("data-target"));
+    const isDecimal = target % 1 !== 0;
+    let count = 0;
+    const speed = target / 100;
+
+    const updateCounter = () => {
+      if (count < target) {
+        count += speed;
+        counter.innerText = isDecimal ? count.toFixed(1) + "+" : Math.floor(count) + "+";
+        setTimeout(updateCounter, 20);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+
+    updateCounter();
+  });
+
+});
+
+// Hover Effect
+document.querySelectorAll('.stat-card').forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    card.style.transform = 'translateY(-8px)';
+    card.style.boxShadow = '0 20px 40px rgba(0,0,0,0.12)';
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0)';
+    card.style.boxShadow = '0 10px 25px rgba(0,0,0,0.08)';
+  });
+});
+</script> 
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -369,6 +452,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
