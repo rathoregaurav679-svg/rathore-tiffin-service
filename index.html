@@ -316,16 +316,17 @@ body{background:#fff;color:#333;}
 <!-- TRUST + MAP SECTION START -->
 <section style="padding:80px 20px; background:linear-gradient(135deg,#fff5f0,#ffe8d6);">
 
-  <div style="max-width:1300px; margin:0 auto; display:flex; flex-wrap:wrap; gap:50px; align-items:center;">
+  <div style="max-width:1200px; margin:0 auto;">
 
-    <!-- LEFT SIDE CONTENT -->
-    <div style="flex:1; min-width:320px;">
+    <!-- CENTER HEADING -->
+    <h2 style="text-align:center; font-size:34px; font-weight:700; margin-bottom:60px;">
+      Why Customers Trust Rathore Tiffin Service?
+    </h2>
 
-      <h2 style="font-size:32px; font-weight:700; margin-bottom:25px;">
-        Why Customers Trust Rathore Tiffin Service?
-      </h2>
+    <div style="display:flex; flex-wrap:wrap; gap:50px; align-items:flex-start;">
 
-      <div style="line-height:1.8; font-size:16px; color:#444;">
+      <!-- LEFT SIDE TRUST POINTS -->
+      <div style="flex:1; min-width:320px; line-height:1.8; font-size:16px; color:#444;">
 
         <p><b>⏰ On-Time Delivery</b><br>
         We value your time and ensure reliable, punctual delivery every day.</p><br>
@@ -343,59 +344,59 @@ body{background:#fff;color:#333;}
         Choose plans according to your needs.</p><br>
 
         <p><b>⭐ High Customer Satisfaction</b><br>
-        Consistently rated highly by our happy customers.</p><br>
+        Consistently rated highly by our happy customers.</p>
 
       </div>
 
-      <!-- ADDRESS -->
-      <div style="margin-top:25px; padding:20px; background:white; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
+      <!-- RIGHT SIDE MAP + ADDRESS -->
+      <div style="flex:1; min-width:320px; text-align:center;">
 
-        <h3 style="margin-bottom:10px;">📍 Visit Rathore Tiffin Service</h3>
+        <!-- MAP (SMALLER SIZE) -->
+        <iframe
+          src="https://www.google.com/maps?width=100%25&height=350&hl=en&q=No%2019%20B08,%20Shop,%20Netaji%20Subhash%20Place,%20Pitampura,%20New%20Delhi,%20Delhi%20110034&t=&z=15&ie=UTF8&iwloc=B&output=embed"
+          width="100%"
+          height="350"
+          style="border:0; border-radius:20px; box-shadow:0 15px 35px rgba(0,0,0,0.15);"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
 
-        <p style="color:#555; line-height:1.6;">
-          No 19 B08, Shop,<br>
-          Netaji Subhash Place,<br>
-          Pitampura, New Delhi,<br>
-          Delhi, 110034
-        </p>
+        <!-- ADDRESS BOX -->
+        <div style="margin-top:25px; padding:20px; background:white; border-radius:15px; box-shadow:0 10px 25px rgba(0,0,0,0.08);">
 
-        <p style="margin-top:10px; font-weight:bold;">
-          ⭐⭐⭐⭐⭐ 4.8 Google Reviews <br>
-          ₹1–200 • Tiffin Service Provider
-        </p>
+          <h3 style="margin-bottom:10px;">📍 Visit Rathore Tiffin Service</h3>
 
-        <!-- GET DIRECTIONS BUTTON -->
-        <a 
-        href="https://www.google.com/maps/dir/?api=1&destination=No+19+B08,+Shop,+Netaji+Subhash+Place,+Pitampura,+New+Delhi,+Delhi+110034"
-        target="_blank"
-        style="
-        display:inline-block;
-        margin-top:15px;
-        background:#ff6b35;
-        color:white;
-        padding:12px 28px;
-        border-radius:30px;
-        text-decoration:none;
-        font-weight:600;
-        transition:0.3s;">
-        🚗 Get Directions
-        </a>
+          <p style="color:#555; line-height:1.6;">
+            No 19 B08, Shop,<br>
+            Netaji Subhash Place,<br>
+            Pitampura, New Delhi,<br>
+            Delhi, 110034
+          </p>
+
+          <p style="margin-top:10px; font-weight:bold;">
+            ⭐⭐⭐⭐⭐ 4.8 Google Reviews <br>
+            ₹1–200 • Tiffin Service Provider
+          </p>
+
+          <a 
+          href="https://www.google.com/maps/dir/?api=1&destination=No+19+B08,+Shop,+Netaji+Subhash+Place,+Pitampura,+New+Delhi,+Delhi+110034"
+          target="_blank"
+          style="
+          display:inline-block;
+          margin-top:15px;
+          background:#ff6b35;
+          color:white;
+          padding:12px 28px;
+          border-radius:30px;
+          text-decoration:none;
+          font-weight:600;
+          transition:0.3s;">
+          🚗 Get Directions
+          </a>
+
+        </div>
 
       </div>
-
-    </div>
-
-    <!-- RIGHT SIDE MAP -->
-    <div style="flex:1; min-width:320px;">
-
-      <iframe
-        src="https://www.google.com/maps?width=100%25&height=450&hl=en&q=No%2019%20B08,%20Shop,%20Netaji%20Subhash%20Place,%20Pitampura,%20New%20Delhi,%20Delhi%20110034&t=&z=15&ie=UTF8&iwloc=B&output=embed"
-        width="100%"
-        height="450"
-        style="border:0; border-radius:20px; box-shadow:0 15px 35px rgba(0,0,0,0.15);"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
 
     </div>
 
@@ -558,6 +559,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
