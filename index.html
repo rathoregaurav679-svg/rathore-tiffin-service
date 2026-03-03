@@ -521,6 +521,7 @@ transition:0.3s;">
 
 </section>
 
+
 <script>
 function sendToWhatsApp() {
   var meal = document.getElementById("mealType").value;
@@ -538,14 +539,17 @@ function sendToWhatsApp() {
 
   var phoneNumber = "917982774162"; // WhatsApp number
 
-  var message = "Hello Rathore Tiffin Service,%0A%0A"
-              + "I want to book:%0A"
-              + "Meal: " + meal + "%0A"
-              + "Time: " + time + "%0A"
-              + "Plan: " + plan + "%0A"
-              + "Quantity: " + qty + "%0A"
-              + "Address: " + address + "%0A"
-              + "Notes: " + notes;
+  // Encode each line for WhatsApp URL
+  var message = encodeURIComponent(
+    "Hello Rathore Tiffin Service,\n\n" +
+    "I want to book:\n" +
+    "Meal: " + meal + "\n" +
+    "Time: " + time + "\n" +
+    "Plan: " + plan + "\n" +
+    "Quantity: " + qty + "\n" +
+    "Address: " + address + "\n" +
+    "Notes: " + notes
+  );
 
   var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + message;
   window.open(whatsappURL, "_blank");
@@ -628,6 +632,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
