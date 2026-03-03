@@ -455,7 +455,7 @@ transition:0.3s;">
       <div style="flex:1; min-width:200px;">
         <label style="font-weight:600;">🍱 Select Meal</label>
         <select id="mealType" style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
-          <option value="default">default</option>
+          <option value="">-- Select Meal --</option>
           <option value="Lunch">Lunch</option>
           <option value="Dinner">Dinner</option>
         </select>
@@ -471,6 +471,7 @@ transition:0.3s;">
       <div style="flex:1; min-width:200px;">
         <label style="font-weight:600;">💎 Select Plan</label>
         <select id="mealPlan" style="width:100%; padding:12px; margin-top:8px; border-radius:10px; border:1px solid #ddd;">
+          <option value="">-- Select Plan --</option>
           <option value="Basic Plan">Basic Plan</option>
           <option value="Standard Plan">Standard Plan</option>
           <option value="Premium Plan">Premium Plan</option>
@@ -504,20 +505,30 @@ transition:0.3s;">
 
 <script>
 function sendToWhatsApp() {
+
   var meal = document.getElementById("mealType").value;
   var time = document.getElementById("mealTime").value;
   var plan = document.getElementById("mealPlan").value;
 
-  var phoneNumber = "917982774162"; // 👈 Apna WhatsApp number yahan change kar sakte ho (91 + number)
+  // Validation
+  if(meal === "" || time === "" || plan === ""){
+    alert("⚠️ Please select Meal, Time and Plan before proceeding.");
+    return;
+  }
 
-  var message = "Hello Rathore Tiffin Service,%0A%0AI would like to book a meal:%0A%0A🍱 Meal Type: " 
-  + meal + "%0A⏰ Time: " + time + "%0A💎 Plan: " + plan;
+  var phoneNumber = "917982774162"; // apna WhatsApp number yaha daalein
+
+  var message = "Hello Rathore Tiffin Service,%0A%0A"
+              + "I want to book:%0A"
+              + "Meal: " + meal + "%0A"
+              + "Time: " + time + "%0A"
+              + "Plan: " + plan;
 
   var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + message;
 
   window.open(whatsappURL, "_blank");
 }
-</script> 
+</script>
 
 <!-- ===== FOOTER ===== -->
 <footer class="footer" id="contact">
@@ -568,6 +579,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
