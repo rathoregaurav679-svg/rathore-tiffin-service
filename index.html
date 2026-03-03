@@ -521,7 +521,7 @@ transition:0.3s;">
 
 </section>
 
-
+<!-- WhatsApp Script -->
 <script>
 function sendToWhatsApp() {
   var meal = document.getElementById("mealType").value;
@@ -532,14 +532,14 @@ function sendToWhatsApp() {
   var notes = document.getElementById("mealNotes").value;
 
   // Validation
-  if(meal === "" || time === "" || plan === "" || address === "" || qty === ""){
+  if(meal === "" || time === "" || plan === "" || qty === "" || address === ""){
     alert("⚠️ Please fill all required fields before proceeding.");
     return;
   }
 
   var phoneNumber = "917982774162"; // WhatsApp number
 
-  // Encode each line for WhatsApp URL
+  // Encode everything for WhatsApp URL
   var message = encodeURIComponent(
     "Hello Rathore Tiffin Service,\n\n" +
     "I want to book:\n" +
@@ -552,33 +552,6 @@ function sendToWhatsApp() {
   );
 
   var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + message;
-  window.open(whatsappURL, "_blank");
-}
-</script>
-
-<script>
-function sendToWhatsApp() {
-
-  var meal = document.getElementById("mealType").value;
-  var time = document.getElementById("mealTime").value;
-  var plan = document.getElementById("mealPlan").value;
-
-  // Validation
-  if(meal === "" || time === "" || plan === ""){
-    alert("⚠️ Please select Meal, Time and Plan before proceeding.");
-    return;
-  }
-
-  var phoneNumber = "917982774162"; // apna WhatsApp number yaha daalein
-
-  var message = "Hello Rathore Tiffin Service,%0A%0A"
-              + "I want to book:%0A"
-              + "Meal: " + meal + "%0A"
-              + "Time: " + time + "%0A"
-              + "Plan: " + plan;
-
-  var whatsappURL = "https://wa.me/" + phoneNumber + "?text=" + message;
-
   window.open(whatsappURL, "_blank");
 }
 </script>
@@ -632,6 +605,7 @@ function topFunction(){window.scrollTo({top:0,behavior:'smooth'});}
 // ===== Payment Popup =====
 function openPayment(plan){document.getElementById("paymentBox").style.display="flex";document.getElementById("selectedPlan").innerText="Selected: "+plan;}
 function
+
 
 
 
